@@ -1,0 +1,21 @@
+{
+  "name": "market-data-normalizer",
+  "version": "1.0.0",
+  "description": "A service to normalize raw market data into an aggregated format.",
+  "main": "market_data_normalizer.js",
+  "scripts": {
+    "start": "node market_data_normalizer.js"
+  },
+  "keywords": [
+    "crypto",
+    "market-data",
+    "etl",
+    "normalizer"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^8.4.1",
+    "dotenv": "^16.4.5"
+  }
+} 

@@ -1,0 +1,39 @@
+{
+  "name": "smart-money-engine",
+  "version": "3.0.0",
+  "description": "Enhanced Smart Money Concept Analysis Engine with historical data and signal tracking",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "jest",
+    "setup:notifications": "node scripts/setup_notifications.js",
+    "signals:monitor": "node scripts/monitor_signals.js",
+    "test:notifications": "node -e \"require('./services/notification_service').prototype.testNotification()\""
+  },
+  "keywords": [
+    "crypto",
+    "trading",
+    "smart-money",
+    "analysis",
+    "signals"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "body-parser": "^2.2.0",
+    "bull": "^4.16.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^5.1.0",
+    "ioredis": "^5.4.1",
+    "mongoose": "^8.7.1",
+    "technicalindicators": "^3.1.0",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.7"
+  }
+}

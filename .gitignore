@@ -1,0 +1,24 @@
+# Python / Django
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.sqlite3
+/staticfiles/
+/media/
+
+# Envs & secrets
+.env
+.env.*
+*.pem
+*.key
+
+# Node / Front
+node_modules/
+.next/
+dist/
+coverage/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store

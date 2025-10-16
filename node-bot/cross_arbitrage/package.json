@@ -1,0 +1,21 @@
+{
+  "name": "cross-arbitrage-bot",
+  "version": "1.0.0",
+  "description": "Simulated cross-exchange arbitrage bot",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "keywords": [
+    "arbitrage",
+    "crypto",
+    "bot"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "dotenv": "^16.4.5"
+  }
+} 

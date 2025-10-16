@@ -1,0 +1,202 @@
+2025-06-27T16:55:05.723Z - [ETL] Failed to update pairs-markets data: Request failed with status code 404
+2025-06-27T17:31:38.582Z - [ETL] Error processing BTC: Request failed with status code 404
+2025-06-27T17:31:38.590Z - [ETL] Error processing USDT: Request failed with status code 404
+2025-06-27T17:31:38.711Z - [ETL] Error processing BNB: Request failed with status code 404
+2025-06-27T17:31:38.779Z - [ETL] Error processing ETH: Request failed with status code 404
+2025-06-27T17:31:38.829Z - [ETL] Error processing XRP: Request failed with status code 404
+2025-06-27T17:32:39.839Z - [ETL] Error processing DOGE: Request failed with status code 404
+2025-06-27T17:32:39.948Z - [ETL] Error processing ADA: Request failed with status code 404
+2025-06-27T17:32:40.047Z - [ETL] Error processing USDC: Request failed with status code 404
+2025-06-27T17:32:40.110Z - [ETL] Error processing SOL: Request failed with status code 404
+2025-06-27T17:32:40.189Z - [ETL] Error processing TRX: Request failed with status code 404
+2025-06-27T17:33:41.094Z - [ETL] Error processing BCH: Request failed with status code 404
+2025-06-27T17:33:41.172Z - [ETL] Error processing HYPE: Request failed with status code 404
+2025-06-27T17:33:41.284Z - [ETL] Error processing SUI: Request failed with status code 404
+2025-06-27T17:33:41.326Z - [ETL] Error processing LINK: Request failed with status code 404
+2025-06-27T17:33:41.386Z - [ETL] Error processing AVAX: Request failed with status code 404
+2025-06-27T17:34:12.962Z - [ETL] At least one request failed for XRP. Skipping update. See errors below:
+2025-06-27T17:34:12.964Z -   - price_ohlc: Request failed with status code 404
+2025-06-27T17:34:13.009Z - [ETL] At least one request failed for BNB. Skipping update. See errors below:
+2025-06-27T17:34:13.009Z -   - price_ohlc: Request failed with status code 404
+2025-06-27T17:34:13.044Z - [ETL] At least one request failed for USDT. Skipping update. See errors below:
+2025-06-27T17:34:13.044Z -   - price_ohlc: Request failed with status code 404
+2025-06-27T17:34:13.077Z - [ETL] At least one request failed for BTC. Skipping update. See errors below:
+2025-06-27T17:34:13.077Z -   - price_ohlc: Request failed with status code 404
+2025-06-27T17:34:13.160Z - [ETL] At least one request failed for ETH. Skipping update. See errors below:
+2025-06-27T17:34:13.161Z -   - price_ohlc: Request failed with status code 404
+2025-06-27T17:35:14.281Z - [ETL] At least one request failed for USDC. Skipping update. See errors below:
+2025-06-27T17:35:14.281Z -   - price_ohlc: Request failed with status code 404
+2025-06-27T17:35:14.341Z - [ETL] At least one request failed for TRX. Skipping update. See errors below:
+2025-06-27T17:35:14.341Z -   - price_ohlc: Request failed with status code 404
+2025-06-27T17:35:14.422Z - [ETL] At least one request failed for SOL. Skipping update. See errors below:
+2025-06-27T17:35:14.422Z -   - price_ohlc: Request failed with status code 404
+2025-06-27T17:35:14.528Z - [ETL] At least one request failed for DOGE. Skipping update. See errors below:
+2025-06-27T17:35:14.528Z -   - price_ohlc: Request failed with status code 404
+2025-06-27T17:35:14.573Z - [ETL] At least one request failed for ADA. Skipping update. See errors below:
+2025-06-27T17:35:14.573Z -   - price_ohlc: Request failed with status code 404
+2025-06-27T17:36:00.167Z - [ETL] At least one request failed for BTC. Skipping update. See errors below:
+2025-06-27T17:36:00.167Z -   - price_ohlc: Request failed with status code 404
+2025-06-27T17:36:00.184Z - [ETL] At least one request failed for XRP. Skipping update. See errors below:
+2025-06-27T17:36:00.184Z -   - price_ohlc: Request failed with status code 404
+2025-06-27T17:36:00.234Z - [ETL] At least one request failed for BNB. Skipping update. See errors below:
+2025-06-27T17:36:00.234Z -   - price_ohlc: Request failed with status code 404
+2025-06-27T17:36:00.278Z - [ETL] At least one request failed for ETH. Skipping update. See errors below:
+2025-06-27T17:36:00.278Z -   - price_ohlc: Request failed with status code 404
+2025-06-27T17:36:00.313Z - [ETL] At least one request failed for USDT. Skipping update. See errors below:
+2025-06-27T17:36:00.313Z -   - price_ohlc: Request failed with status code 404
+2025-06-27T17:37:01.407Z - [ETL] At least one request failed for SOL. Skipping update. See errors below:
+2025-06-27T17:37:01.407Z -   - price_ohlc: Request failed with status code 404
+2025-06-27T17:37:01.407Z - [ETL] At least one request failed for USDC. Skipping update. See errors below:
+2025-06-27T17:37:01.407Z -   - price_ohlc: Request failed with status code 404
+2025-06-27T17:37:01.437Z - [ETL] At least one request failed for TRX. Skipping update. See errors below:
+2025-06-27T17:37:01.437Z -   - price_ohlc: Request failed with status code 404
+2025-06-27T17:37:01.477Z - [ETL] At least one request failed for DOGE. Skipping update. See errors below:
+2025-06-27T17:37:01.477Z -   - price_ohlc: Request failed with status code 404
+2025-06-27T17:37:01.539Z - [ETL] At least one request failed for ADA. Skipping update. See errors below:
+2025-06-27T17:37:01.539Z -   - price_ohlc: Request failed with status code 404
+2025-06-27T17:38:02.429Z - [ETL] At least one request failed for SUI. Skipping update. See errors below:
+2025-06-27T17:38:02.430Z -   - price_ohlc: Request failed with status code 404
+2025-06-27T17:38:02.431Z - [ETL] At least one request failed for HYPE. Skipping update. See errors below:
+2025-06-27T17:38:02.431Z -   - price_ohlc: Request failed with status code 404
+2025-06-27T17:38:02.524Z - [ETL] At least one request failed for BCH. Skipping update. See errors below:
+2025-06-27T17:38:02.524Z -   - price_ohlc: Request failed with status code 404
+2025-06-27T17:38:02.556Z - [ETL] At least one request failed for AVAX. Skipping update. See errors below:
+2025-06-27T17:38:02.556Z -   - price_ohlc: Request failed with status code 404
+2025-06-27T17:38:02.597Z - [ETL] At least one request failed for LINK. Skipping update. See errors below:
+2025-06-27T17:38:02.597Z -   - price_ohlc: Request failed with status code 404
+2025-06-27T17:39:03.458Z - [ETL] At least one request failed for TON. Skipping update. See errors below:
+2025-06-27T17:39:03.458Z -   - price_ohlc: Request failed with status code 404
+2025-06-27T17:39:03.514Z - [ETL] At least one request failed for HBAR. Skipping update. See errors below:
+2025-06-27T17:39:03.514Z -   - price_ohlc: Request failed with status code 404
+2025-06-27T17:39:03.541Z - [ETL] At least one request failed for LTC. Skipping update. See errors below:
+2025-06-27T17:39:03.541Z -   - price_ohlc: Request failed with status code 404
+2025-06-27T17:39:03.572Z - [ETL] At least one request failed for SHIB. Skipping update. See errors below:
+2025-06-27T17:39:03.572Z -   - price_ohlc: Request failed with status code 404
+2025-06-27T17:39:03.622Z - [ETL] At least one request failed for XLM. Skipping update. See errors below:
+2025-06-27T17:39:03.622Z -   - price_ohlc: Request failed with status code 404
+2025-06-27T17:40:04.744Z - [ETL] At least one request failed for DOT. Skipping update. See errors below:
+2025-06-27T17:40:04.744Z -   - price_ohlc: Request failed with status code 404
+2025-06-27T17:40:04.755Z - [ETL] At least one request failed for XMR. Skipping update. See errors below:
+2025-06-27T17:40:04.755Z -   - price_ohlc: Request failed with status code 404
+2025-06-27T17:40:05.161Z - [ETL] At least one request failed for USDe. Skipping update. See errors below:
+2025-06-27T17:40:05.161Z -   - price_ohlc: Request failed with status code 404
+2025-06-27T17:40:05.164Z - [ETL] At least one request failed for BGB. Skipping update. See errors below:
+2025-06-27T17:40:05.164Z -   - price_ohlc: Request failed with status code 404
+2025-06-27T17:40:05.165Z - [ETL] At least one request failed for DAI. Skipping update. See errors below:
+2025-06-27T17:40:05.165Z -   - price_ohlc: Request failed with status code 404
+2025-06-27T17:41:06.366Z - [ETL] At least one request failed for PI. Skipping update. See errors below:
+2025-06-27T17:41:06.367Z -   - price_ohlc: Request failed with status code 404
+2025-06-27T17:41:06.568Z - [ETL] At least one request failed for UNI. Skipping update. See errors below:
+2025-06-27T17:41:06.568Z -   - price_ohlc: Request failed with status code 404
+2025-06-27T17:41:06.795Z - [ETL] At least one request failed for AAVE. Skipping update. See errors below:
+2025-06-27T17:41:06.795Z -   - price_ohlc: Request failed with status code 404
+2025-06-27T17:41:06.795Z - [ETL] At least one request failed for PEPE. Skipping update. See errors below:
+2025-06-27T17:41:06.795Z -   - price_ohlc: Request failed with status code 404
+2025-06-27T17:41:06.913Z - [ETL] At least one request failed for APT. Skipping update. See errors below:
+2025-06-27T17:41:06.914Z -   - price_ohlc: Request failed with status code 404
+2025-06-27T17:42:07.993Z - [ETL] At least one request failed for TAO. Skipping update. See errors below:
+2025-06-27T17:42:07.993Z -   - price_ohlc: Request failed with status code 404
+2025-06-27T17:42:08.013Z - [ETL] At least one request failed for ONDO. Skipping update. See errors below:
+2025-06-27T17:42:08.013Z -   - price_ohlc: Request failed with status code 404
+2025-06-27T17:42:08.096Z - [ETL] At least one request failed for ETC. Skipping update. See errors below:
+2025-06-27T17:42:08.097Z -   - price_ohlc: Request failed with status code 404
+2025-06-27T17:42:08.125Z - [ETL] At least one request failed for ICP. Skipping update. See errors below:
+2025-06-27T17:42:08.125Z -   - price_ohlc: Request failed with status code 404
+2025-06-27T17:42:08.136Z - [ETL] At least one request failed for NEAR. Skipping update. See errors below:
+2025-06-27T17:42:08.136Z -   - price_ohlc: Request failed with status code 404
+2025-06-27T17:43:09.007Z - [ETL] At least one request failed for KAS. Skipping update. See errors below:
+2025-06-27T17:43:09.007Z -   - price_ohlc: Request failed with status code 404
+2025-06-27T17:43:09.029Z - [ETL] At least one request failed for VET. Skipping update. See errors below:
+2025-06-27T17:43:09.029Z -   - price_ohlc: Request failed with status code 404
+2025-06-27T17:43:09.070Z - [ETL] At least one request failed for TRUMP. Skipping update. See errors below:
+2025-06-27T17:43:09.070Z -   - price_ohlc: Request failed with status code 404
+2025-06-27T17:43:09.194Z - [ETL] At least one request failed for POL. Skipping update. See errors below:
+2025-06-27T17:43:09.194Z -   - price_ohlc: Request failed with status code 404
+2025-06-27T17:43:09.231Z - [ETL] At least one request failed for MNT. Skipping update. See errors below:
+2025-06-27T17:43:09.231Z -   - price_ohlc: Request failed with status code 404
+2025-06-27T17:57:06.559Z - [ETL] At least one request failed for BTC. Skipping update. See errors below:
+2025-06-27T17:57:06.562Z -   - price_ohlc: Request failed with status code 404
+2025-06-27T17:57:06.800Z - [ETL] At least one request failed for BNB. Skipping update. See errors below:
+2025-06-27T17:57:06.800Z -   - price_ohlc: Request failed with status code 404
+2025-06-27T17:57:06.835Z - [ETL] At least one request failed for XRP. Skipping update. See errors below:
+2025-06-27T17:57:06.835Z -   - price_ohlc: Request failed with status code 404
+2025-06-27T17:57:07.333Z - [ETL] At least one request failed for ETH. Skipping update. See errors below:
+2025-06-27T17:57:07.334Z -   - price_ohlc: Request failed with status code 404
+2025-06-27T17:57:07.423Z - [ETL] At least one request failed for USDT. Skipping update. See errors below:
+2025-06-27T17:57:07.423Z -   - price_ohlc: Request failed with status code 404
+2025-06-27T17:58:22.148Z - [ETL] At least one request failed for BTC. Skipping update. See errors below:
+2025-06-27T17:58:22.148Z -   - price_ohlc: Request failed with status code 404 | Response: {"code":"404","msg":"Not Found"}
+2025-06-27T17:58:22.163Z - [ETL] At least one request failed for XRP. Skipping update. See errors below:
+2025-06-27T17:58:22.163Z -   - price_ohlc: Request failed with status code 404 | Response: {"code":"404","msg":"Not Found"}
+2025-06-27T17:58:22.204Z - [ETL] At least one request failed for BNB. Skipping update. See errors below:
+2025-06-27T17:58:22.204Z -   - price_ohlc: Request failed with status code 404 | Response: {"code":"404","msg":"Not Found"}
+2025-06-27T17:58:22.240Z - [ETL] At least one request failed for ETH. Skipping update. See errors below:
+2025-06-27T17:58:22.241Z -   - price_ohlc: Request failed with status code 404 | Response: {"code":"404","msg":"Not Found"}
+2025-06-27T17:58:22.366Z - [ETL] At least one request failed for USDT. Skipping update. See errors below:
+2025-06-27T17:58:22.366Z -   - price_ohlc: Request failed with status code 404 | Response: {"code":"404","msg":"Not Found"}
+2025-06-27T18:07:43.536Z - [ETL] At least one request failed for ETH. Skipping update. See errors below:
+2025-06-27T18:07:43.539Z -   - price_ohlc: Request failed with status code 404 (using: ETHUSDT) | Response: {"code":"404","msg":"Not Found"}
+2025-06-27T18:07:43.614Z - [ETL] At least one request failed for BTC. Skipping update. See errors below:
+2025-06-27T18:07:43.614Z -   - price_ohlc: Request failed with status code 404 (using: BTCUSDT) | Response: {"code":"404","msg":"Not Found"}
+2025-06-27T18:07:43.676Z - [ETL] At least one request failed for USDT. Skipping update. See errors below:
+2025-06-27T18:07:43.676Z -   - price_ohlc: Request failed with status code 404 (using: USDTUSDT) | Response: {"code":"404","msg":"Not Found"}
+2025-06-27T18:07:43.760Z - [ETL] At least one request failed for XRP. Skipping update. See errors below:
+2025-06-27T18:07:43.760Z -   - price_ohlc: Request failed with status code 404 (using: XRPUSDT) | Response: {"code":"404","msg":"Not Found"}
+2025-06-27T18:07:43.925Z - [ETL] At least one request failed for BNB. Skipping update. See errors below:
+2025-06-27T18:07:43.925Z -   - price_ohlc: Request failed with status code 404 (using: BNBUSDT) | Response: {"code":"404","msg":"Not Found"}
+2025-06-27T18:08:54.474Z - [ETL] At least one request failed for SOL. Skipping update. See errors below:
+2025-06-27T18:08:54.474Z -   - price_ohlc: Request failed with status code 404 (using: SOLUSDT) | Response: {"code":"404","msg":"Not Found"}
+2025-06-27T18:08:55.576Z - [ETL] At least one request failed for USDC. Skipping update. See errors below:
+2025-06-27T18:08:55.577Z -   - price_ohlc: Request failed with status code 404 (using: USDCUSDT) | Response: {"code":"404","msg":"Not Found"}
+2025-06-27T18:08:56.340Z - [ETL] At least one request failed for TRX. Skipping update. See errors below:
+2025-06-27T18:08:56.340Z -   - price_ohlc: Request failed with status code 404 (using: TRXUSDT) | Response: {"code":"404","msg":"Not Found"}
+2025-06-27T18:08:56.372Z - [ETL] At least one request failed for ADA. Skipping update. See errors below:
+2025-06-27T18:08:56.372Z -   - price_ohlc: Request failed with status code 404 (using: ADAUSDT) | Response: {"code":"404","msg":"Not Found"}
+2025-06-27T18:08:56.506Z - [ETL] At least one request failed for DOGE. Skipping update. See errors below:
+2025-06-27T18:08:56.506Z -   - price_ohlc: Request failed with status code 404 (using: DOGEUSDT) | Response: {"code":"404","msg":"Not Found"}
+2025-06-27T18:09:42.302Z - [ETL] At least one request failed for BTC. Skipping update. See errors below:
+2025-06-27T18:09:42.302Z -   - price_ohlc: Request failed with status code 404 (using: BTCUSDT) | Response: {"code":"404","msg":"Not Found"}
+2025-06-27T18:09:42.420Z - [ETL] At least one request failed for XRP. Skipping update. See errors below:
+2025-06-27T18:09:42.420Z -   - price_ohlc: Request failed with status code 404 (using: XRPUSDT) | Response: {"code":"404","msg":"Not Found"}
+2025-06-27T18:09:42.634Z - [ETL] At least one request failed for BNB. Skipping update. See errors below:
+2025-06-27T18:09:42.634Z -   - price_ohlc: Request failed with status code 404 (using: BNBUSDT) | Response: {"code":"404","msg":"Not Found"}
+2025-06-27T18:09:42.849Z - [ETL] At least one request failed for ETH. Skipping update. See errors below:
+2025-06-27T18:09:42.849Z -   - price_ohlc: Request failed with status code 404 (using: ETHUSDT) | Response: {"code":"404","msg":"Not Found"}
+2025-06-27T18:09:44.255Z - [ETL] At least one request failed for USDT. Skipping update. See errors below:
+2025-06-27T18:09:44.256Z -   - price_ohlc: Request failed with status code 404 (using: USDTUSDT) | Response: {"code":"404","msg":"Not Found"}
+2025-06-27T18:10:45.191Z - [ETL] At least one request failed for TRX. Skipping update. See errors below:
+2025-06-27T18:10:45.191Z -   - price_ohlc: Request failed with status code 404 (using: TRXUSDT) | Response: {"code":"404","msg":"Not Found"}
+2025-06-27T18:10:45.275Z - [ETL] At least one request failed for SOL. Skipping update. See errors below:
+2025-06-27T18:10:45.275Z -   - price_ohlc: Request failed with status code 404 (using: SOLUSDT) | Response: {"code":"404","msg":"Not Found"}
+2025-06-27T18:10:45.345Z - [ETL] At least one request failed for USDC. Skipping update. See errors below:
+2025-06-27T18:10:45.345Z -   - price_ohlc: Request failed with status code 404 (using: USDCUSDT) | Response: {"code":"404","msg":"Not Found"}
+2025-06-27T18:10:45.533Z - [ETL] At least one request failed for DOGE. Skipping update. See errors below:
+2025-06-27T18:10:45.533Z -   - price_ohlc: Request failed with status code 404 (using: DOGEUSDT) | Response: {"code":"404","msg":"Not Found"}
+2025-06-27T18:10:45.603Z - [ETL] At least one request failed for ADA. Skipping update. See errors below:
+2025-06-27T18:10:45.603Z -   - price_ohlc: Request failed with status code 404 (using: ADAUSDT) | Response: {"code":"404","msg":"Not Found"}
+2025-06-27T18:11:43.956Z - [ETL] At least one request failed for BTC. Skipping update. See errors below:
+2025-06-27T18:11:43.957Z -   - price_ohlc: Request failed with status code 404 (using: BTCUSDT) | Response: {"code":"404","msg":"Not Found"}
+2025-06-27T18:11:44.047Z - [ETL] At least one request failed for XRP. Skipping update. See errors below:
+2025-06-27T18:11:44.047Z -   - price_ohlc: Request failed with status code 404 (using: XRPUSDT) | Response: {"code":"404","msg":"Not Found"}
+2025-06-27T18:11:44.263Z - [ETL] At least one request failed for USDT. Skipping update. See errors below:
+2025-06-27T18:11:44.263Z -   - price_ohlc: Request failed with status code 404 (using: USDTUSDT) | Response: {"code":"404","msg":"Not Found"}
+2025-06-27T18:11:44.265Z - [ETL] At least one request failed for BNB. Skipping update. See errors below:
+2025-06-27T18:11:44.265Z -   - price_ohlc: Request failed with status code 404 (using: BNBUSDT) | Response: {"code":"404","msg":"Not Found"}
+2025-06-27T18:11:44.398Z - [ETL] At least one request failed for ETH. Skipping update. See errors below:
+2025-06-27T18:11:44.398Z -   - price_ohlc: Request failed with status code 404 (using: ETHUSDT) | Response: {"code":"404","msg":"Not Found"}
+2025-06-27T18:37:37.556Z - [ETL] At least one request failed for XLM. Skipping update. See errors below:
+2025-06-27T18:37:37.572Z -   - pairs_markets: getaddrinfo EAI_AGAIN open-api-v4.coinglass.com (using: XLM)
+2025-06-27T18:37:37.573Z -   - liquidation: getaddrinfo EAI_AGAIN open-api-v4.coinglass.com (using: XLMUSDT)
+2025-06-27T19:09:16.163Z - [ETL] At least one request failed for EGLD. Skipping update. See errors below:
+2025-06-27T19:09:16.174Z -   - pairs_markets: getaddrinfo EAI_AGAIN open-api-v4.coinglass.com (using: EGLD)
+2025-06-27T19:09:16.175Z -   - liquidation: getaddrinfo EAI_AGAIN open-api-v4.coinglass.com (using: EGLDUSDT)
+2025-06-27T19:21:52.763Z - [ETL] A critical error occurred while processing ETH: E11000 duplicate key error collection: smartmoney.raw_coin_market_data index: symbol_1 dup key: { symbol: null }
+2025-06-27T19:21:53.291Z - [ETL] A critical error occurred while processing BTC: E11000 duplicate key error collection: smartmoney.raw_coin_market_data index: symbol_1 dup key: { symbol: null }
+2025-06-27T19:21:53.667Z - [ETL] A critical error occurred while processing XRP: E11000 duplicate key error collection: smartmoney.raw_coin_market_data index: symbol_1 dup key: { symbol: null }
+2025-06-27T19:21:54.284Z - [ETL] A critical error occurred while processing BNB: E11000 duplicate key error collection: smartmoney.raw_coin_market_data index: symbol_1 dup key: { symbol: null }
+2025-06-27T19:22:57.298Z - [ETL] A critical error occurred while processing ADA: E11000 duplicate key error collection: smartmoney.raw_coin_market_data index: symbol_1 dup key: { symbol: null }
+2025-06-27T19:22:58.057Z - [ETL] A critical error occurred while processing TRX: E11000 duplicate key error collection: smartmoney.raw_coin_market_data index: symbol_1 dup key: { symbol: null }
+2025-06-27T19:22:58.524Z - [ETL] A critical error occurred while processing SOL: E11000 duplicate key error collection: smartmoney.raw_coin_market_data index: symbol_1 dup key: { symbol: null }
+2025-06-27T19:22:59.155Z - [ETL] A critical error occurred while processing USDC: E11000 duplicate key error collection: smartmoney.raw_coin_market_data index: symbol_1 dup key: { symbol: null }
+2025-06-27T19:22:59.156Z - [ETL] A critical error occurred while processing DOGE: E11000 duplicate key error collection: smartmoney.raw_coin_market_data index: symbol_1 dup key: { symbol: null }
+2025-06-27T19:25:51.694Z -   - [API Error] For ADA, request pairs_markets failed: getaddrinfo EAI_AGAIN open-api-v4.coinglass.com (using: ADA)

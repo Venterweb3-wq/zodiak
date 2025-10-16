@@ -1,0 +1,11 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'django'
+    static_configs:
+      - targets: ['django:8000']
+
+  - job_name: 'node-exporter' # Пример, если вы добавите node-exporter для системных метрик
+    static_configs:
+      - targets: ['node-exporter:9100'] 

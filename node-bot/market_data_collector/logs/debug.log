@@ -1,0 +1,1616 @@
+Скрипт market_collector.js запущен. Проверка записи в debug.log.
+Проверка переменной окружения MONGO_URI: mongodb://localhost:27017/smartmoney
+Инициализация API-клиентов Bybit и TAAPI.IO...
+Подключение к MongoDB...
+Успешное подключение к MongoDB.
+После попытки подключения к MongoDB.
+Запуск основного цикла сбора данных...
+[Collector] Starting data collection run...
+Тестовое сообщение для проверки логирования в debug.log
+[Collector] Checking Django API availability...
+[Collector] Checking availability of Django API at: http://localhost:8000/api/smc/cmc-filters/active/
+[Collector] Django API at http://localhost:8000/api/smc/cmc-filters/active/ is available.
+[Collector] Django API is available. Will attempt to use it for filtering.
+[Collector] Fetching top coins from CoinMarketCap...
+[Collector] Retrieved 5000 coins from CoinMarketCap.
+[Collector] Django API is available. Sending coins for filtering...
+[Collector] Received filters from Django API. Data structure: {
+  "id": 1,
+  "name": "Default",
+  "min_volume_24h": "10000000.00",
+  "min_market_cap": "30000000.00",
+  "min_market_pairs": 1,
+  "min_age_days": 90,
+  "max_7d_change": "100.00",
+  "min_rank": 1,
+  "max_rank": 550,
+  "blacklist": "titan",
+  "excluded_tags": "casino"
+}...
+[Collector] BTC passed volume filter with 24h volume: $47,092,581,944.02 (minimum: $10,000,000)
+[Collector] ETH passed volume filter with 24h volume: $25,843,182,390.65 (minimum: $10,000,000)
+[Collector] XRP passed volume filter with 24h volume: $6,641,098,458.65 (minimum: $10,000,000)
+[Collector] USDT passed volume filter with 24h volume: $83,900,526,012.31 (minimum: $10,000,000)
+[Collector] BNB passed volume filter with 24h volume: $2,055,452,520.41 (minimum: $10,000,000)
+[Collector] SOL passed volume filter with 24h volume: $4,035,172,539.95 (minimum: $10,000,000)
+[Collector] USDC passed volume filter with 24h volume: $11,590,631,698.33 (minimum: $10,000,000)
+[Collector] DOGE passed volume filter with 24h volume: $4,253,237,658.78 (minimum: $10,000,000)
+[Collector] TRX passed volume filter with 24h volume: $1,149,630,506.78 (minimum: $10,000,000)
+[Collector] ADA passed volume filter with 24h volume: $1,043,239,455.48 (minimum: $10,000,000)
+[Collector] HYPE passed volume filter with 24h volume: $242,857,142.55 (minimum: $10,000,000)
+[Collector] XLM passed volume filter with 24h volume: $634,794,326.91 (minimum: $10,000,000)
+[Collector] SUI passed volume filter with 24h volume: $1,066,047,808.37 (minimum: $10,000,000)
+[Collector] LINK passed volume filter with 24h volume: $638,578,447.40 (minimum: $10,000,000)
+[Collector] HBAR passed volume filter with 24h volume: $578,414,444.45 (minimum: $10,000,000)
+[Collector] AVAX passed volume filter with 24h volume: $648,248,961.33 (minimum: $10,000,000)
+[Collector] BCH passed volume filter with 24h volume: $428,805,754.66 (minimum: $10,000,000)
+[Collector] SHIB passed volume filter with 24h volume: $433,348,354.08 (minimum: $10,000,000)
+[Collector] LTC passed volume filter with 24h volume: $1,360,737,965.32 (minimum: $10,000,000)
+[Collector] LEO did not pass volume filter with 24h volume: $3,417,572.95 (minimum: $10,000,000)
+[Collector] TON passed volume filter with 24h volume: $160,776,400.99 (minimum: $10,000,000)
+[Collector] DOT passed volume filter with 24h volume: $285,101,998.64 (minimum: $10,000,000)
+[Collector] UNI passed volume filter with 24h volume: $482,740,547.97 (minimum: $10,000,000)
+[Collector] XMR passed volume filter with 24h volume: $75,312,262.72 (minimum: $10,000,000)
+[Collector] USDe passed volume filter with 24h volume: $101,923,697.21 (minimum: $10,000,000)
+[Collector] BGB passed volume filter with 24h volume: $255,412,770.34 (minimum: $10,000,000)
+[Collector] PEPE passed volume filter with 24h volume: $983,337,658.12 (minimum: $10,000,000)
+[Collector] DAI passed volume filter with 24h volume: $22,595,892,351.19 (minimum: $10,000,000)
+[Collector] AAVE passed volume filter with 24h volume: $395,735,207.10 (minimum: $10,000,000)
+[Collector] CRO passed volume filter with 24h volume: $34,378,682.39 (minimum: $10,000,000)
+[Collector] TAO passed volume filter with 24h volume: $110,911,430.84 (minimum: $10,000,000)
+[Collector] ETC passed volume filter with 24h volume: $733,265,941.46 (minimum: $10,000,000)
+[Collector] NEAR passed volume filter with 24h volume: $217,175,131.28 (minimum: $10,000,000)
+[Collector] APT passed volume filter with 24h volume: $190,493,403.64 (minimum: $10,000,000)
+[Collector] PI passed volume filter with 24h volume: $41,641,189.74 (minimum: $10,000,000)
+[Collector] ONDO passed volume filter with 24h volume: $178,719,629.65 (minimum: $10,000,000)
+[Collector] ICP passed volume filter with 24h volume: $88,882,501.20 (minimum: $10,000,000)
+[Collector] OKB did not pass volume filter with 24h volume: $8,144,356.69 (minimum: $10,000,000)
+[Collector] ENA passed volume filter with 24h volume: $399,891,908.35 (minimum: $10,000,000)
+[Collector] MNT passed volume filter with 24h volume: $368,950,095.68 (minimum: $10,000,000)
+[Collector] BONK passed volume filter with 24h volume: $650,600,260.04 (minimum: $10,000,000)
+[Collector] KAS passed volume filter with 24h volume: $73,207,930.70 (minimum: $10,000,000)
+[Collector] ALGO passed volume filter with 24h volume: $138,169,434.51 (minimum: $10,000,000)
+[Collector] POL passed volume filter with 24h volume: $145,271,146.50 (minimum: $10,000,000)
+[Collector] ARB passed volume filter with 24h volume: $333,343,035.06 (minimum: $10,000,000)
+[Collector] VET passed volume filter with 24h volume: $59,376,064.13 (minimum: $10,000,000)
+[Collector] USD1 passed volume filter with 24h volume: $536,345,598.81 (minimum: $10,000,000)
+[Collector] RENDER passed volume filter with 24h volume: $72,252,343.42 (minimum: $10,000,000)
+[Collector] GT did not pass volume filter with 24h volume: $7,200,198.61 (minimum: $10,000,000)
+[Collector] SEI passed volume filter with 24h volume: $168,499,526.59 (minimum: $10,000,000)
+[Collector] Filtered 47 coins using Django API configuration.
+[Process] --- Processing BTC (Pair: BTCUSDT) ---
+Запрос данных для пары: BTCUSDT (символ: BTC) с Bybit и TAAPI.IO
+[Process] Unexpected error processing BTC: this.bybit.getFundingRateHistory is not a function
+[Process] Stack trace for BTC: TypeError: this.bybit.getFundingRateHistory is not a function
+    at MarketCollector.processCoin (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:337:28)
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:222:28)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+[Process] --- Processing ETH (Pair: ETHUSDT) ---
+Запрос данных для пары: ETHUSDT (символ: ETH) с Bybit и TAAPI.IO
+[Process] Unexpected error processing ETH: this.bybit.getFundingRateHistory is not a function
+[Process] Stack trace for ETH: TypeError: this.bybit.getFundingRateHistory is not a function
+    at MarketCollector.processCoin (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:337:28)
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:222:28)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+[Process] --- Processing XRP (Pair: XRPUSDT) ---
+Запрос данных для пары: XRPUSDT (символ: XRP) с Bybit и TAAPI.IO
+[Process] Unexpected error processing XRP: this.bybit.getFundingRateHistory is not a function
+[Process] Stack trace for XRP: TypeError: this.bybit.getFundingRateHistory is not a function
+    at MarketCollector.processCoin (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:337:28)
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:222:28)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+[Process] --- Processing USDT (Pair: USDTUSDT) ---
+Запрос данных для пары: USDTUSDT (символ: USDT) с Bybit и TAAPI.IO
+[Process] Unexpected error processing USDT: this.bybit.getFundingRateHistory is not a function
+[Process] Stack trace for USDT: TypeError: this.bybit.getFundingRateHistory is not a function
+    at MarketCollector.processCoin (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:337:28)
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:222:28)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+[Process] --- Processing BNB (Pair: BNBUSDT) ---
+Запрос данных для пары: BNBUSDT (символ: BNB) с Bybit и TAAPI.IO
+[Process] Unexpected error processing BNB: this.bybit.getFundingRateHistory is not a function
+[Process] Stack trace for BNB: TypeError: this.bybit.getFundingRateHistory is not a function
+    at MarketCollector.processCoin (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:337:28)
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:222:28)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+[Process] --- Processing SOL (Pair: SOLUSDT) ---
+Запрос данных для пары: SOLUSDT (символ: SOL) с Bybit и TAAPI.IO
+[Process] Unexpected error processing SOL: this.bybit.getFundingRateHistory is not a function
+[Process] Stack trace for SOL: TypeError: this.bybit.getFundingRateHistory is not a function
+    at MarketCollector.processCoin (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:337:28)
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:222:28)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+[Process] --- Processing USDC (Pair: USDCUSDT) ---
+Запрос данных для пары: USDCUSDT (символ: USDC) с Bybit и TAAPI.IO
+[Process] Unexpected error processing USDC: this.bybit.getFundingRateHistory is not a function
+[Process] Stack trace for USDC: TypeError: this.bybit.getFundingRateHistory is not a function
+    at MarketCollector.processCoin (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:337:28)
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:222:28)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+[Process] --- Processing DOGE (Pair: DOGEUSDT) ---
+Запрос данных для пары: DOGEUSDT (символ: DOGE) с Bybit и TAAPI.IO
+[Process] Unexpected error processing DOGE: this.bybit.getFundingRateHistory is not a function
+[Process] Stack trace for DOGE: TypeError: this.bybit.getFundingRateHistory is not a function
+    at MarketCollector.processCoin (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:337:28)
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:222:28)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+[Process] --- Processing TRX (Pair: TRXUSDT) ---
+Запрос данных для пары: TRXUSDT (символ: TRX) с Bybit и TAAPI.IO
+[Process] Unexpected error processing TRX: this.bybit.getFundingRateHistory is not a function
+[Process] Stack trace for TRX: TypeError: this.bybit.getFundingRateHistory is not a function
+    at MarketCollector.processCoin (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:337:28)
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:222:28)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+[Process] --- Processing ADA (Pair: ADAUSDT) ---
+Запрос данных для пары: ADAUSDT (символ: ADA) с Bybit и TAAPI.IO
+[Process] Unexpected error processing ADA: this.bybit.getFundingRateHistory is not a function
+[Process] Stack trace for ADA: TypeError: this.bybit.getFundingRateHistory is not a function
+    at MarketCollector.processCoin (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:337:28)
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:222:28)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+[Process] --- Processing HYPE (Pair: HYPEUSDT) ---
+Запрос данных для пары: HYPEUSDT (символ: HYPE) с Bybit и TAAPI.IO
+[Process] Unexpected error processing HYPE: this.bybit.getFundingRateHistory is not a function
+[Process] Stack trace for HYPE: TypeError: this.bybit.getFundingRateHistory is not a function
+    at MarketCollector.processCoin (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:337:28)
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:222:28)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+[Process] --- Processing XLM (Pair: XLMUSDT) ---
+Запрос данных для пары: XLMUSDT (символ: XLM) с Bybit и TAAPI.IO
+[Process] Unexpected error processing XLM: this.bybit.getFundingRateHistory is not a function
+[Process] Stack trace for XLM: TypeError: this.bybit.getFundingRateHistory is not a function
+    at MarketCollector.processCoin (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:337:28)
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:222:28)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+[Process] --- Processing SUI (Pair: SUIUSDT) ---
+Запрос данных для пары: SUIUSDT (символ: SUI) с Bybit и TAAPI.IO
+[Process] Unexpected error processing SUI: this.bybit.getFundingRateHistory is not a function
+[Process] Stack trace for SUI: TypeError: this.bybit.getFundingRateHistory is not a function
+    at MarketCollector.processCoin (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:337:28)
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:222:28)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+[Process] --- Processing LINK (Pair: LINKUSDT) ---
+Запрос данных для пары: LINKUSDT (символ: LINK) с Bybit и TAAPI.IO
+[Process] Unexpected error processing LINK: this.bybit.getFundingRateHistory is not a function
+[Process] Stack trace for LINK: TypeError: this.bybit.getFundingRateHistory is not a function
+    at MarketCollector.processCoin (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:337:28)
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:222:28)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+[Process] --- Processing HBAR (Pair: HBARUSDT) ---
+Запрос данных для пары: HBARUSDT (символ: HBAR) с Bybit и TAAPI.IO
+[Process] Unexpected error processing HBAR: this.bybit.getFundingRateHistory is not a function
+[Process] Stack trace for HBAR: TypeError: this.bybit.getFundingRateHistory is not a function
+    at MarketCollector.processCoin (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:337:28)
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:222:28)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+[Process] --- Processing AVAX (Pair: AVAXUSDT) ---
+Запрос данных для пары: AVAXUSDT (символ: AVAX) с Bybit и TAAPI.IO
+[Process] Unexpected error processing AVAX: this.bybit.getFundingRateHistory is not a function
+[Process] Stack trace for AVAX: TypeError: this.bybit.getFundingRateHistory is not a function
+    at MarketCollector.processCoin (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:337:28)
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:222:28)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+[Process] --- Processing BCH (Pair: BCHUSDT) ---
+Запрос данных для пары: BCHUSDT (символ: BCH) с Bybit и TAAPI.IO
+[Process] Unexpected error processing BCH: this.bybit.getFundingRateHistory is not a function
+[Process] Stack trace for BCH: TypeError: this.bybit.getFundingRateHistory is not a function
+    at MarketCollector.processCoin (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:337:28)
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:222:28)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+[Process] --- Processing SHIB (Pair: SHIBUSDT) ---
+Запрос данных для пары: SHIBUSDT (символ: SHIB) с Bybit и TAAPI.IO
+[Process] Unexpected error processing SHIB: this.bybit.getFundingRateHistory is not a function
+[Process] Stack trace for SHIB: TypeError: this.bybit.getFundingRateHistory is not a function
+    at MarketCollector.processCoin (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:337:28)
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:222:28)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+[Process] --- Processing LTC (Pair: LTCUSDT) ---
+Запрос данных для пары: LTCUSDT (символ: LTC) с Bybit и TAAPI.IO
+[Process] Unexpected error processing LTC: this.bybit.getFundingRateHistory is not a function
+[Process] Stack trace for LTC: TypeError: this.bybit.getFundingRateHistory is not a function
+    at MarketCollector.processCoin (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:337:28)
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:222:28)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+[Process] --- Processing TON (Pair: TONUSDT) ---
+Запрос данных для пары: TONUSDT (символ: TON) с Bybit и TAAPI.IO
+[Process] Unexpected error processing TON: this.bybit.getFundingRateHistory is not a function
+[Process] Stack trace for TON: TypeError: this.bybit.getFundingRateHistory is not a function
+    at MarketCollector.processCoin (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:337:28)
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:222:28)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+[Process] --- Processing DOT (Pair: DOTUSDT) ---
+Запрос данных для пары: DOTUSDT (символ: DOT) с Bybit и TAAPI.IO
+[Process] Unexpected error processing DOT: this.bybit.getFundingRateHistory is not a function
+[Process] Stack trace for DOT: TypeError: this.bybit.getFundingRateHistory is not a function
+    at MarketCollector.processCoin (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:337:28)
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:222:28)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+[Process] --- Processing UNI (Pair: UNIUSDT) ---
+Запрос данных для пары: UNIUSDT (символ: UNI) с Bybit и TAAPI.IO
+[Process] Unexpected error processing UNI: this.bybit.getFundingRateHistory is not a function
+[Process] Stack trace for UNI: TypeError: this.bybit.getFundingRateHistory is not a function
+    at MarketCollector.processCoin (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:337:28)
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:222:28)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+[Process] --- Processing XMR (Pair: XMRUSDT) ---
+Запрос данных для пары: XMRUSDT (символ: XMR) с Bybit и TAAPI.IO
+[Process] Unexpected error processing XMR: this.bybit.getFundingRateHistory is not a function
+[Process] Stack trace for XMR: TypeError: this.bybit.getFundingRateHistory is not a function
+    at MarketCollector.processCoin (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:337:28)
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:222:28)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+[Process] --- Processing USDe (Pair: USDeUSDT) ---
+Запрос данных для пары: USDeUSDT (символ: USDe) с Bybit и TAAPI.IO
+[Process] Unexpected error processing USDe: this.bybit.getFundingRateHistory is not a function
+[Process] Stack trace for USDe: TypeError: this.bybit.getFundingRateHistory is not a function
+    at MarketCollector.processCoin (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:337:28)
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:222:28)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+[Process] --- Processing BGB (Pair: BGBUSDT) ---
+Запрос данных для пары: BGBUSDT (символ: BGB) с Bybit и TAAPI.IO
+[Process] Unexpected error processing BGB: this.bybit.getFundingRateHistory is not a function
+[Process] Stack trace for BGB: TypeError: this.bybit.getFundingRateHistory is not a function
+    at MarketCollector.processCoin (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:337:28)
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:222:28)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+[Process] --- Processing PEPE (Pair: PEPEUSDT) ---
+Запрос данных для пары: PEPEUSDT (символ: PEPE) с Bybit и TAAPI.IO
+[Process] Unexpected error processing PEPE: this.bybit.getFundingRateHistory is not a function
+[Process] Stack trace for PEPE: TypeError: this.bybit.getFundingRateHistory is not a function
+    at MarketCollector.processCoin (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:337:28)
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:222:28)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+[Process] --- Processing DAI (Pair: DAIUSDT) ---
+Запрос данных для пары: DAIUSDT (символ: DAI) с Bybit и TAAPI.IO
+[Process] Unexpected error processing DAI: this.bybit.getFundingRateHistory is not a function
+[Process] Stack trace for DAI: TypeError: this.bybit.getFundingRateHistory is not a function
+    at MarketCollector.processCoin (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:337:28)
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:222:28)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+[Process] --- Processing AAVE (Pair: AAVEUSDT) ---
+Запрос данных для пары: AAVEUSDT (символ: AAVE) с Bybit и TAAPI.IO
+[Process] Unexpected error processing AAVE: this.bybit.getFundingRateHistory is not a function
+[Process] Stack trace for AAVE: TypeError: this.bybit.getFundingRateHistory is not a function
+    at MarketCollector.processCoin (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:337:28)
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:222:28)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+[Process] --- Processing CRO (Pair: CROUSDT) ---
+Запрос данных для пары: CROUSDT (символ: CRO) с Bybit и TAAPI.IO
+[Process] Unexpected error processing CRO: this.bybit.getFundingRateHistory is not a function
+[Process] Stack trace for CRO: TypeError: this.bybit.getFundingRateHistory is not a function
+    at MarketCollector.processCoin (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:337:28)
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:222:28)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+[Process] --- Processing TAO (Pair: TAOUSDT) ---
+Запрос данных для пары: TAOUSDT (символ: TAO) с Bybit и TAAPI.IO
+[Process] Unexpected error processing TAO: this.bybit.getFundingRateHistory is not a function
+[Process] Stack trace for TAO: TypeError: this.bybit.getFundingRateHistory is not a function
+    at MarketCollector.processCoin (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:337:28)
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:222:28)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+[Process] --- Processing ETC (Pair: ETCUSDT) ---
+Запрос данных для пары: ETCUSDT (символ: ETC) с Bybit и TAAPI.IO
+[Process] Unexpected error processing ETC: this.bybit.getFundingRateHistory is not a function
+[Process] Stack trace for ETC: TypeError: this.bybit.getFundingRateHistory is not a function
+    at MarketCollector.processCoin (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:337:28)
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:222:28)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+[Process] --- Processing NEAR (Pair: NEARUSDT) ---
+Запрос данных для пары: NEARUSDT (символ: NEAR) с Bybit и TAAPI.IO
+[Process] Unexpected error processing NEAR: this.bybit.getFundingRateHistory is not a function
+[Process] Stack trace for NEAR: TypeError: this.bybit.getFundingRateHistory is not a function
+    at MarketCollector.processCoin (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:337:28)
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:222:28)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+[Process] --- Processing APT (Pair: APTUSDT) ---
+Запрос данных для пары: APTUSDT (символ: APT) с Bybit и TAAPI.IO
+[Process] Unexpected error processing APT: this.bybit.getFundingRateHistory is not a function
+[Process] Stack trace for APT: TypeError: this.bybit.getFundingRateHistory is not a function
+    at MarketCollector.processCoin (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:337:28)
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:222:28)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+[Process] --- Processing PI (Pair: PIUSDT) ---
+Запрос данных для пары: PIUSDT (символ: PI) с Bybit и TAAPI.IO
+[Process] Unexpected error processing PI: this.bybit.getFundingRateHistory is not a function
+[Process] Stack trace for PI: TypeError: this.bybit.getFundingRateHistory is not a function
+    at MarketCollector.processCoin (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:337:28)
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:222:28)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+[Process] --- Processing ONDO (Pair: ONDOUSDT) ---
+Запрос данных для пары: ONDOUSDT (символ: ONDO) с Bybit и TAAPI.IO
+[Process] Unexpected error processing ONDO: this.bybit.getFundingRateHistory is not a function
+[Process] Stack trace for ONDO: TypeError: this.bybit.getFundingRateHistory is not a function
+    at MarketCollector.processCoin (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:337:28)
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:222:28)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+[Process] --- Processing ICP (Pair: ICPUSDT) ---
+Запрос данных для пары: ICPUSDT (символ: ICP) с Bybit и TAAPI.IO
+[Process] Unexpected error processing ICP: this.bybit.getFundingRateHistory is not a function
+[Process] Stack trace for ICP: TypeError: this.bybit.getFundingRateHistory is not a function
+    at MarketCollector.processCoin (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:337:28)
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:222:28)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+[Process] --- Processing ENA (Pair: ENAUSDT) ---
+Запрос данных для пары: ENAUSDT (символ: ENA) с Bybit и TAAPI.IO
+[Process] Unexpected error processing ENA: this.bybit.getFundingRateHistory is not a function
+[Process] Stack trace for ENA: TypeError: this.bybit.getFundingRateHistory is not a function
+    at MarketCollector.processCoin (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:337:28)
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:222:28)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+[Process] --- Processing MNT (Pair: MNTUSDT) ---
+Запрос данных для пары: MNTUSDT (символ: MNT) с Bybit и TAAPI.IO
+[Process] Unexpected error processing MNT: this.bybit.getFundingRateHistory is not a function
+[Process] Stack trace for MNT: TypeError: this.bybit.getFundingRateHistory is not a function
+    at MarketCollector.processCoin (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:337:28)
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:222:28)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+[Process] --- Processing BONK (Pair: BONKUSDT) ---
+Запрос данных для пары: BONKUSDT (символ: BONK) с Bybit и TAAPI.IO
+[Process] Unexpected error processing BONK: this.bybit.getFundingRateHistory is not a function
+[Process] Stack trace for BONK: TypeError: this.bybit.getFundingRateHistory is not a function
+    at MarketCollector.processCoin (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:337:28)
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:222:28)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+[Process] --- Processing KAS (Pair: KASUSDT) ---
+Запрос данных для пары: KASUSDT (символ: KAS) с Bybit и TAAPI.IO
+[Process] Unexpected error processing KAS: this.bybit.getFundingRateHistory is not a function
+[Process] Stack trace for KAS: TypeError: this.bybit.getFundingRateHistory is not a function
+    at MarketCollector.processCoin (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:337:28)
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:222:28)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+[Process] --- Processing ALGO (Pair: ALGOUSDT) ---
+Запрос данных для пары: ALGOUSDT (символ: ALGO) с Bybit и TAAPI.IO
+[Process] Unexpected error processing ALGO: this.bybit.getFundingRateHistory is not a function
+[Process] Stack trace for ALGO: TypeError: this.bybit.getFundingRateHistory is not a function
+    at MarketCollector.processCoin (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:337:28)
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:222:28)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+[Process] --- Processing POL (Pair: POLUSDT) ---
+Запрос данных для пары: POLUSDT (символ: POL) с Bybit и TAAPI.IO
+[Process] Unexpected error processing POL: this.bybit.getFundingRateHistory is not a function
+[Process] Stack trace for POL: TypeError: this.bybit.getFundingRateHistory is not a function
+    at MarketCollector.processCoin (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:337:28)
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:222:28)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+[Process] --- Processing ARB (Pair: ARBUSDT) ---
+Запрос данных для пары: ARBUSDT (символ: ARB) с Bybit и TAAPI.IO
+[Process] Unexpected error processing ARB: this.bybit.getFundingRateHistory is not a function
+[Process] Stack trace for ARB: TypeError: this.bybit.getFundingRateHistory is not a function
+    at MarketCollector.processCoin (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:337:28)
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:222:28)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+[Process] --- Processing VET (Pair: VETUSDT) ---
+Запрос данных для пары: VETUSDT (символ: VET) с Bybit и TAAPI.IO
+[Process] Unexpected error processing VET: this.bybit.getFundingRateHistory is not a function
+[Process] Stack trace for VET: TypeError: this.bybit.getFundingRateHistory is not a function
+    at MarketCollector.processCoin (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:337:28)
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:222:28)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+[Process] --- Processing USD1 (Pair: USD1USDT) ---
+Запрос данных для пары: USD1USDT (символ: USD1) с Bybit и TAAPI.IO
+[Process] Unexpected error processing USD1: this.bybit.getFundingRateHistory is not a function
+[Process] Stack trace for USD1: TypeError: this.bybit.getFundingRateHistory is not a function
+    at MarketCollector.processCoin (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:337:28)
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:222:28)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+[Process] --- Processing RENDER (Pair: RENDERUSDT) ---
+Запрос данных для пары: RENDERUSDT (символ: RENDER) с Bybit и TAAPI.IO
+[Process] Unexpected error processing RENDER: this.bybit.getFundingRateHistory is not a function
+[Process] Stack trace for RENDER: TypeError: this.bybit.getFundingRateHistory is not a function
+    at MarketCollector.processCoin (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:337:28)
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:222:28)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+[Process] --- Processing SEI (Pair: SEIUSDT) ---
+Запрос данных для пары: SEIUSDT (символ: SEI) с Bybit и TAAPI.IO
+[Process] Unexpected error processing SEI: this.bybit.getFundingRateHistory is not a function
+[Process] Stack trace for SEI: TypeError: this.bybit.getFundingRateHistory is not a function
+    at MarketCollector.processCoin (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:337:28)
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:222:28)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+2025-07-20T19:41:36.265Z - Скрипт market_collector.js запущен.
+2025-07-20T19:41:36.269Z - Проверка переменной окружения MONGO_URI: mongodb://localhost:27017/smartmoney
+2025-07-20T19:41:36.323Z - Инициализация API-клиентов Bybit и TAAPI.IO...
+2025-07-20T19:41:36.326Z - Подключение к MongoDB...
+2025-07-20T19:41:36.327Z - Успешное подключение к MongoDB.
+2025-07-20T19:41:36.327Z - После попытки подключения к MongoDB.
+2025-07-20T19:41:36.327Z - Запуск основного цикла сбора данных...
+2025-07-20T19:41:36.327Z - [Collector] Starting data collection run...
+2025-07-20T19:41:36.327Z - Тестовое сообщение для проверки логирования в debug.log
+2025-07-20T19:41:36.328Z - [Collector] Checking Django API availability...
+2025-07-20T19:41:36.329Z - [Collector] Checking availability of Django API at: http://localhost:8000/api/smc/cmc-filters/active/
+2025-07-20T19:41:36.423Z - [Collector] Django API at http://localhost:8000/api/smc/cmc-filters/active/ is available.
+2025-07-20T19:41:36.423Z - [Collector] Django API is available. Will attempt to use it for filtering.
+2025-07-20T19:41:36.424Z - [API] Calling CoinMarketCap API at https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest
+2025-07-20T19:41:39.327Z - [Collector] Retrieved 5000 coins from CoinMarketCap.
+2025-07-20T19:41:39.327Z - [Collector] Django API is available. Sending coins for filtering...
+2025-07-20T19:41:39.327Z - [API] Calling Django API at http://localhost:8000/api/smc/cmc-filters/active/
+2025-07-20T19:41:39.359Z - [Collector] Received filters from Django API. Data structure: {
+  "id": 1,
+  "name": "Default",
+  "min_volume_24h": "10000000.00",
+  "min_market_cap": "30000000.00",
+  "min_market_pairs": 1,
+  "min_age_days": 90,
+  "max_7d_change": "100.00",
+  "min_rank": 1,
+  "max_rank": 550,
+  "blacklist": "titan",
+  "excluded_tags": "casino"
+}...
+2025-07-20T19:41:39.418Z - [Collector] BTC passed volume filter with 24h volume: $52,905,767,607.28 (minimum: $10,000,000)
+2025-07-20T19:41:41.520Z - [Collector] ETH passed volume filter with 24h volume: $42,265,064,688.15 (minimum: $10,000,000)
+2025-07-20T19:41:43.623Z - [Collector] XRP passed volume filter with 24h volume: $8,043,435,539.64 (minimum: $10,000,000)
+2025-07-20T19:41:45.724Z - [Collector] USDT passed volume filter with 24h volume: $111,795,563,623.38 (minimum: $10,000,000)
+2025-07-20T19:41:47.825Z - [Collector] BNB passed volume filter with 24h volume: $2,161,478,036.30 (minimum: $10,000,000)
+2025-07-20T19:41:49.929Z - [Collector] SOL passed volume filter with 24h volume: $6,064,613,523.97 (minimum: $10,000,000)
+2025-07-20T19:41:52.032Z - [Collector] USDC passed volume filter with 24h volume: $14,894,343,184.67 (minimum: $10,000,000)
+2025-07-20T19:41:54.135Z - [Collector] DOGE passed volume filter with 24h volume: $5,108,760,990.89 (minimum: $10,000,000)
+2025-07-20T19:41:56.238Z - [Collector] ADA passed volume filter with 24h volume: $1,533,425,738.99 (minimum: $10,000,000)
+2025-07-20T19:41:58.340Z - [Collector] TRX passed volume filter with 24h volume: $912,288,150.43 (minimum: $10,000,000)
+2025-07-20T19:42:00.443Z - [Collector] HYPE passed volume filter with 24h volume: $341,905,715.31 (minimum: $10,000,000)
+2025-07-20T19:42:02.546Z - [Collector] XLM passed volume filter with 24h volume: $614,226,460.27 (minimum: $10,000,000)
+2025-07-20T19:42:04.649Z - [Collector] SUI passed volume filter with 24h volume: $1,423,755,771.79 (minimum: $10,000,000)
+2025-07-20T19:42:06.752Z - [Collector] LINK passed volume filter with 24h volume: $1,117,406,516.87 (minimum: $10,000,000)
+2025-07-20T19:42:08.855Z - [Collector] HBAR passed volume filter with 24h volume: $591,235,939.26 (minimum: $10,000,000)
+2025-07-20T19:42:10.957Z - [Collector] BCH passed volume filter with 24h volume: $689,998,812.34 (minimum: $10,000,000)
+2025-07-20T19:42:13.059Z - [Collector] AVAX passed volume filter with 24h volume: $774,807,368.66 (minimum: $10,000,000)
+2025-07-20T19:42:15.162Z - [Collector] SHIB passed volume filter with 24h volume: $416,901,784.94 (minimum: $10,000,000)
+2025-07-20T19:42:17.264Z - [Collector] LTC passed volume filter with 24h volume: $2,066,616,539.84 (minimum: $10,000,000)
+2025-07-20T19:42:19.366Z - [Collector] LEO did not pass volume filter with 24h volume: $3,622,550.87 (minimum: $10,000,000)
+2025-07-20T19:42:21.469Z - [Collector] TON passed volume filter with 24h volume: $221,590,880.73 (minimum: $10,000,000)
+2025-07-20T19:42:23.571Z - [Collector] DOT passed volume filter with 24h volume: $418,997,999.84 (minimum: $10,000,000)
+2025-07-20T19:42:25.674Z - [Collector] UNI passed volume filter with 24h volume: $587,818,648.42 (minimum: $10,000,000)
+2025-07-20T19:42:27.776Z - [Collector] USDe passed volume filter with 24h volume: $177,042,179.28 (minimum: $10,000,000)
+2025-07-20T19:47:20.356Z - Скрипт market_collector.js запущен.
+2025-07-20T19:47:20.359Z - Проверка переменной окружения MONGO_URI: mongodb://localhost:27017/smartmoney
+2025-07-20T19:47:20.413Z - Инициализация API-клиентов Bybit и TAAPI.IO...
+2025-07-20T19:47:20.415Z - Подключение к MongoDB...
+2025-07-20T19:47:20.415Z - Успешное подключение к MongoDB.
+2025-07-20T19:47:20.416Z - После попытки подключения к MongoDB.
+2025-07-20T19:47:20.416Z - Запуск основного цикла сбора данных...
+2025-07-20T19:47:20.416Z - [Collector] Starting data collection run...
+2025-07-20T19:47:20.416Z - Тестовое сообщение для проверки логирования в debug.log
+2025-07-20T19:47:20.417Z - [Collector] Checking Django API availability...
+2025-07-20T19:47:20.418Z - [Collector] Checking availability of Django API at: http://localhost:8000/api/smc/cmc-filters/active/
+2025-07-20T19:47:20.612Z - [Collector] Django API at http://localhost:8000/api/smc/cmc-filters/active/ is available.
+2025-07-20T19:47:20.612Z - [Collector] Django API is available. Will attempt to use it for filtering.
+2025-07-20T19:47:20.612Z - [API] Calling CoinMarketCap API at https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest
+2025-07-20T19:47:22.246Z - [Collector] Retrieved 5000 coins from CoinMarketCap.
+2025-07-20T19:47:22.247Z - [Collector] Django API is available. Sending coins for filtering...
+2025-07-20T19:47:22.247Z - [API] Calling Django API at http://localhost:8000/api/smc/cmc-filters/active/
+2025-07-20T19:47:22.279Z - [Collector] Received filters from Django API. Data structure: {
+  "id": 1,
+  "name": "Default",
+  "min_volume_24h": "10000000.00",
+  "min_market_cap": "30000000.00",
+  "min_market_pairs": 1,
+  "min_age_days": 90,
+  "max_7d_change": "100.00",
+  "min_rank": 1,
+  "max_rank": 550,
+  "blacklist": "titan",
+  "excluded_tags": "casino"
+}...
+2025-07-20T19:47:22.338Z - [Collector] BTC passed volume filter with 24h volume: $52,490,116,255.37 (minimum: $10,000,000)
+2025-07-20T19:47:24.442Z - [Collector] ETH passed volume filter with 24h volume: $42,097,707,622.95 (minimum: $10,000,000)
+2025-07-20T19:47:26.543Z - [Collector] XRP passed volume filter with 24h volume: $8,052,430,925.70 (minimum: $10,000,000)
+2025-07-20T19:47:28.643Z - [Collector] USDT passed volume filter with 24h volume: $111,274,001,155.62 (minimum: $10,000,000)
+2025-07-20T19:47:30.744Z - [Collector] BNB passed volume filter with 24h volume: $2,153,020,483.15 (minimum: $10,000,000)
+2025-07-20T19:47:32.847Z - [Collector] SOL passed volume filter with 24h volume: $6,058,413,767.44 (minimum: $10,000,000)
+2025-07-20T19:47:34.950Z - [Collector] USDC passed volume filter with 24h volume: $14,849,660,518.46 (minimum: $10,000,000)
+2025-07-20T19:47:37.052Z - [Collector] DOGE passed volume filter with 24h volume: $5,164,053,745.40 (minimum: $10,000,000)
+2025-07-20T19:47:39.155Z - [Collector] ADA passed volume filter with 24h volume: $1,532,823,968.64 (minimum: $10,000,000)
+2025-07-20T19:47:41.257Z - [Collector] TRX passed volume filter with 24h volume: $912,212,397.06 (minimum: $10,000,000)
+2025-07-20T19:47:43.360Z - [Collector] HYPE passed volume filter with 24h volume: $343,039,151.08 (minimum: $10,000,000)
+2025-07-20T19:47:45.463Z - [Collector] XLM passed volume filter with 24h volume: $614,731,273.00 (minimum: $10,000,000)
+2025-07-20T19:47:47.565Z - [Collector] SUI passed volume filter with 24h volume: $1,422,113,276.23 (minimum: $10,000,000)
+2025-07-20T19:47:49.667Z - [Collector] LINK passed volume filter with 24h volume: $1,118,562,889.45 (minimum: $10,000,000)
+2025-07-20T19:47:51.768Z - [Collector] HBAR passed volume filter with 24h volume: $592,611,768.63 (minimum: $10,000,000)
+2025-07-20T19:47:53.872Z - [Collector] BCH passed volume filter with 24h volume: $689,097,395.09 (minimum: $10,000,000)
+2025-07-20T19:47:55.974Z - [Collector] AVAX passed volume filter with 24h volume: $770,571,128.50 (minimum: $10,000,000)
+2025-07-20T19:47:58.076Z - [Collector] SHIB passed volume filter with 24h volume: $415,596,278.32 (minimum: $10,000,000)
+2025-07-20T19:48:00.180Z - [Collector] LTC passed volume filter with 24h volume: $2,041,175,080.41 (minimum: $10,000,000)
+2025-07-20T19:48:02.282Z - [Collector] LEO did not pass volume filter with 24h volume: $3,664,249.53 (minimum: $10,000,000)
+2025-07-20T19:48:04.385Z - [Collector] TON passed volume filter with 24h volume: $221,582,209.22 (minimum: $10,000,000)
+2025-07-20T19:48:06.487Z - [Collector] DOT passed volume filter with 24h volume: $418,091,177.19 (minimum: $10,000,000)
+2025-07-20T19:48:08.591Z - [Collector] UNI passed volume filter with 24h volume: $586,766,211.79 (minimum: $10,000,000)
+2025-07-20T19:48:10.694Z - [Collector] USDe passed volume filter with 24h volume: $176,892,337.58 (minimum: $10,000,000)
+2025-07-20T19:48:12.796Z - [Collector] PEPE passed volume filter with 24h volume: $1,490,520,070.17 (minimum: $10,000,000)
+2025-07-20T19:48:14.898Z - [Collector] XMR passed volume filter with 24h volume: $77,559,931.20 (minimum: $10,000,000)
+2025-07-20T19:48:17.001Z - [Collector] BGB passed volume filter with 24h volume: $209,663,161.58 (minimum: $10,000,000)
+2025-07-20T19:48:19.103Z - [Collector] DAI passed volume filter with 24h volume: $22,215,056,683.81 (minimum: $10,000,000)
+2025-07-20T19:48:21.203Z - [Collector] AAVE passed volume filter with 24h volume: $548,070,533.17 (minimum: $10,000,000)
+2025-07-20T19:48:23.307Z - [Collector] TAO passed volume filter with 24h volume: $144,426,890.76 (minimum: $10,000,000)
+2025-07-20T19:48:25.409Z - [Collector] CRO passed volume filter with 24h volume: $31,510,078.10 (minimum: $10,000,000)
+2025-07-20T19:48:27.512Z - [Collector] ETC passed volume filter with 24h volume: $541,127,642.18 (minimum: $10,000,000)
+2025-07-20T19:48:29.616Z - [Collector] NEAR passed volume filter with 24h volume: $260,374,768.59 (minimum: $10,000,000)
+2025-07-20T19:48:31.718Z - [Collector] APT passed volume filter with 24h volume: $261,448,401.85 (minimum: $10,000,000)
+2025-07-20T19:48:33.821Z - [Collector] PI passed volume filter with 24h volume: $44,459,000.65 (minimum: $10,000,000)
+2025-07-20T19:48:35.924Z - [Collector] ONDO passed volume filter with 24h volume: $194,738,930.24 (minimum: $10,000,000)
+2025-07-20T19:48:38.026Z - [Collector] ICP passed volume filter with 24h volume: $100,580,646.38 (minimum: $10,000,000)
+2025-07-20T19:48:40.129Z - [Collector] ENA passed volume filter with 24h volume: $1,200,544,171.76 (minimum: $10,000,000)
+2025-07-20T19:48:42.230Z - [Collector] OKB passed volume filter with 24h volume: $13,921,307.81 (minimum: $10,000,000)
+2025-07-20T19:48:44.333Z - [Collector] BONK passed volume filter with 24h volume: $674,660,936.12 (minimum: $10,000,000)
+2025-07-20T19:48:46.436Z - [Collector] MNT passed volume filter with 24h volume: $220,164,515.04 (minimum: $10,000,000)
+2025-07-20T19:48:48.538Z - [Collector] POL passed volume filter with 24h volume: $183,929,282.45 (minimum: $10,000,000)
+2025-07-20T19:48:50.641Z - [Collector] KAS passed volume filter with 24h volume: $94,257,454.82 (minimum: $10,000,000)
+2025-07-20T19:48:52.743Z - [Collector] ALGO passed volume filter with 24h volume: $134,290,619.13 (minimum: $10,000,000)
+2025-07-20T19:48:54.847Z - [Collector] ARB passed volume filter with 24h volume: $505,157,206.91 (minimum: $10,000,000)
+2025-07-20T19:48:56.950Z - [Collector] VET passed volume filter with 24h volume: $72,607,302.08 (minimum: $10,000,000)
+2025-07-20T19:48:59.052Z - [Collector] RENDER passed volume filter with 24h volume: $116,647,936.91 (minimum: $10,000,000)
+2025-07-20T19:49:01.153Z - [Collector] USD1 passed volume filter with 24h volume: $583,568,433.49 (minimum: $10,000,000)
+2025-07-20T19:49:03.256Z - [Collector] WLD passed volume filter with 24h volume: $347,869,996.95 (minimum: $10,000,000)
+2025-07-20T19:49:05.359Z - [Collector] GT passed volume filter with 24h volume: $12,377,370.07 (minimum: $10,000,000)
+2025-07-20T19:49:07.461Z - [Collector] Filtered 49 coins using Django API configuration.
+2025-07-20T19:49:07.462Z - [Process] --- Processing BTC (Pair: BTCUSDT) ---
+2025-07-20T19:49:07.463Z - Запрос данных для пары: BTCUSDT (символ: BTC) с Bybit и TAAPI.IO
+2025-07-20T19:49:07.463Z - [Process] Unexpected error processing BTC: this.bybit.getFundingRate is not a function
+2025-07-20T19:49:07.464Z - [Process] Stack trace for BTC: TypeError: this.bybit.getFundingRate is not a function
+    at MarketCollector.processCoin (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:333:28)
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:219:28)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+2025-07-20T19:49:07.464Z - [Bybit API] Fetching kline for BTCUSDT
+2025-07-20T19:49:07.469Z - [Bybit API] Fetching mark price kline for BTCUSDT
+2025-07-20T19:49:09.573Z - [Process] --- Processing ETH (Pair: ETHUSDT) ---
+2025-07-20T19:49:09.573Z - Запрос данных для пары: ETHUSDT (символ: ETH) с Bybit и TAAPI.IO
+2025-07-20T19:49:09.574Z - [Process] Unexpected error processing ETH: this.bybit.getFundingRate is not a function
+2025-07-20T19:49:09.574Z - [Process] Stack trace for ETH: TypeError: this.bybit.getFundingRate is not a function
+    at MarketCollector.processCoin (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:333:28)
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:219:28)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+2025-07-20T19:49:09.575Z - [Bybit API] Fetching kline for ETHUSDT
+2025-07-20T19:49:09.577Z - [Bybit API] Fetching mark price kline for ETHUSDT
+2025-07-20T19:49:11.680Z - [Process] --- Processing XRP (Pair: XRPUSDT) ---
+2025-07-20T19:49:11.681Z - Запрос данных для пары: XRPUSDT (символ: XRP) с Bybit и TAAPI.IO
+2025-07-20T19:49:11.681Z - [Process] Unexpected error processing XRP: this.bybit.getFundingRate is not a function
+2025-07-20T19:49:11.682Z - [Process] Stack trace for XRP: TypeError: this.bybit.getFundingRate is not a function
+    at MarketCollector.processCoin (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:333:28)
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:219:28)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+2025-07-20T19:49:11.682Z - [Bybit API] Fetching kline for XRPUSDT
+2025-07-20T19:49:11.685Z - [Bybit API] Fetching mark price kline for XRPUSDT
+2025-07-20T19:49:13.791Z - [Process] --- Processing USDT (Pair: USDTUSDT) ---
+2025-07-20T19:49:13.792Z - Запрос данных для пары: USDTUSDT (символ: USDT) с Bybit и TAAPI.IO
+2025-07-20T19:49:13.792Z - [Process] Unexpected error processing USDT: this.bybit.getFundingRate is not a function
+2025-07-20T19:49:13.793Z - [Process] Stack trace for USDT: TypeError: this.bybit.getFundingRate is not a function
+    at MarketCollector.processCoin (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:333:28)
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:219:28)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+2025-07-20T19:49:13.793Z - [Bybit API] Fetching kline for USDTUSDT
+2025-07-20T19:49:13.796Z - [Bybit API] Fetching mark price kline for USDTUSDT
+2025-07-20T19:49:15.901Z - [Process] --- Processing BNB (Pair: BNBUSDT) ---
+2025-07-20T19:49:15.902Z - Запрос данных для пары: BNBUSDT (символ: BNB) с Bybit и TAAPI.IO
+2025-07-20T19:49:15.902Z - [Process] Unexpected error processing BNB: this.bybit.getFundingRate is not a function
+2025-07-20T19:49:15.903Z - [Process] Stack trace for BNB: TypeError: this.bybit.getFundingRate is not a function
+    at MarketCollector.processCoin (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:333:28)
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:219:28)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+2025-07-20T19:49:15.903Z - [Bybit API] Fetching kline for BNBUSDT
+2025-07-20T19:49:15.906Z - [Bybit API] Fetching mark price kline for BNBUSDT
+2025-07-20T19:49:18.010Z - [Process] --- Processing SOL (Pair: SOLUSDT) ---
+2025-07-20T19:49:18.010Z - Запрос данных для пары: SOLUSDT (символ: SOL) с Bybit и TAAPI.IO
+2025-07-20T19:49:18.011Z - [Process] Unexpected error processing SOL: this.bybit.getFundingRate is not a function
+2025-07-20T19:49:18.011Z - [Process] Stack trace for SOL: TypeError: this.bybit.getFundingRate is not a function
+    at MarketCollector.processCoin (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:333:28)
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:219:28)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+2025-07-20T19:49:18.011Z - [Bybit API] Fetching kline for SOLUSDT
+2025-07-20T19:49:18.015Z - [Bybit API] Fetching mark price kline for SOLUSDT
+2025-07-20T19:49:20.121Z - [Process] --- Processing USDC (Pair: USDCUSDT) ---
+2025-07-20T19:49:20.121Z - Запрос данных для пары: USDCUSDT (символ: USDC) с Bybit и TAAPI.IO
+2025-07-20T19:49:20.122Z - [Process] Unexpected error processing USDC: this.bybit.getFundingRate is not a function
+2025-07-20T19:49:20.122Z - [Process] Stack trace for USDC: TypeError: this.bybit.getFundingRate is not a function
+    at MarketCollector.processCoin (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:333:28)
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:219:28)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+2025-07-20T19:49:20.122Z - [Bybit API] Fetching kline for USDCUSDT
+2025-07-20T19:49:20.124Z - [Bybit API] Fetching mark price kline for USDCUSDT
+2025-07-20T19:55:54.607Z - Скрипт market_collector.js запущен.
+2025-07-20T19:55:54.610Z - Проверка переменной окружения MONGO_URI: mongodb://localhost:27017/smartmoney
+2025-07-20T19:55:54.666Z - Инициализация API-клиентов Bybit и TAAPI.IO...
+2025-07-20T19:55:54.669Z - Подключение к MongoDB...
+2025-07-20T19:55:54.669Z - Успешное подключение к MongoDB.
+2025-07-20T19:55:54.670Z - После попытки подключения к MongoDB.
+2025-07-20T19:55:54.670Z - Запуск основного цикла сбора данных...
+2025-07-20T19:55:54.670Z - [Collector] Starting data collection run...
+2025-07-20T19:55:54.670Z - Тестовое сообщение для проверки логирования в debug.log
+2025-07-20T19:55:54.671Z - [Collector] Checking Django API availability...
+2025-07-20T19:55:54.671Z - [Collector] Checking availability of Django API at: http://localhost:8000/api/smc/cmc-filters/active/
+2025-07-20T19:55:55.175Z - [Collector] Django API at http://localhost:8000/api/smc/cmc-filters/active/ is available.
+2025-07-20T19:55:55.175Z - [Collector] Django API is available. Will attempt to use it for filtering.
+2025-07-20T19:55:55.176Z - [API] Calling CoinMarketCap API at https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest
+2025-07-20T19:55:56.989Z - [Collector] Retrieved 5000 coins from CoinMarketCap.
+2025-07-20T19:55:56.989Z - [Collector] Django API is available. Fetching filters...
+2025-07-20T19:55:57.030Z - [Collector] Received filters from Django API. Applying them...
+2025-07-20T19:55:57.039Z - [Collector] Filtering complete. Selected 300 coins for processing.
+2025-07-20T19:55:57.039Z - [Process] --- Processing BTC (Pair: undefined) ---
+2025-07-20T19:55:57.040Z - Запрос данных для пары: undefined (символ: BTC) с Bybit и TAAPI.IO
+2025-07-20T19:55:57.041Z - [Process] Unexpected error processing BTC: this.taapi_io.getSMA is not a function
+2025-07-20T19:55:57.041Z - [Process] Stack trace for BTC: TypeError: this.taapi_io.getSMA is not a function
+    at MarketCollector.processCoin (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:280:31)
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:230:28)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+2025-07-20T19:55:57.041Z - [Bybit API] Fetching kline for undefined
+2025-07-20T19:55:57.044Z - [Bybit API] Fetching mark price kline for undefined
+2025-07-20T19:55:57.045Z - [Bybit API] Fetching funding history for undefined
+2025-07-20T19:55:57.047Z - [Bybit API] Fetching ticker for undefined
+2025-07-20T19:55:57.048Z - [Bybit API] Fetching order book for undefined
+2025-07-20T19:55:57.050Z - [Bybit API] Fetching recent trades for undefined
+2025-07-20T19:55:57.051Z - [TAAPI.IO] Fetching RSI for BTC on 1h
+2025-07-20T19:55:57.054Z - [TAAPI.IO] Fetching MACD for BTC on 1h
+2025-07-20T19:55:57.055Z - [TAAPI.IO] Fetching Bollinger Bands for BTC on 1h
+2025-07-20T19:55:57.398Z - [Process] Error fetching MACD for BTC: Request failed with status code 403
+2025-07-20T19:55:57.400Z - [Process] Error fetching Bollinger Bands for BTC: Request failed with status code 429
+2025-07-20T19:55:57.404Z - [Process] Error fetching RSI for BTC: Request failed with status code 429
+2025-07-20T19:55:59.158Z - [Process] --- Processing ETH (Pair: undefined) ---
+2025-07-20T19:55:59.158Z - Запрос данных для пары: undefined (символ: ETH) с Bybit и TAAPI.IO
+2025-07-20T19:55:59.159Z - [Process] Unexpected error processing ETH: this.taapi_io.getSMA is not a function
+2025-07-20T19:55:59.159Z - [Process] Stack trace for ETH: TypeError: this.taapi_io.getSMA is not a function
+    at MarketCollector.processCoin (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:280:31)
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:230:28)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+2025-07-20T19:55:59.160Z - [Bybit API] Fetching kline for undefined
+2025-07-20T19:55:59.162Z - [Bybit API] Fetching mark price kline for undefined
+2025-07-20T19:55:59.165Z - [Bybit API] Fetching funding history for undefined
+2025-07-20T19:55:59.170Z - [Bybit API] Fetching ticker for undefined
+2025-07-20T19:55:59.172Z - [Bybit API] Fetching order book for undefined
+2025-07-20T19:55:59.176Z - [Bybit API] Fetching recent trades for undefined
+2025-07-20T19:55:59.178Z - [TAAPI.IO] Fetching RSI for ETH on 1h
+2025-07-20T19:55:59.180Z - [TAAPI.IO] Fetching MACD for ETH on 1h
+2025-07-20T19:55:59.182Z - [TAAPI.IO] Fetching Bollinger Bands for ETH on 1h
+2025-07-20T19:55:59.402Z - [Process] Error fetching Bollinger Bands for ETH: Request failed with status code 429
+2025-07-20T19:55:59.404Z - [Process] Error fetching RSI for ETH: Request failed with status code 429
+2025-07-20T19:55:59.409Z - [Process] Error fetching MACD for ETH: Request failed with status code 429
+2025-07-20T19:56:01.285Z - [Process] --- Processing XRP (Pair: undefined) ---
+2025-07-20T19:56:01.285Z - Запрос данных для пары: undefined (символ: XRP) с Bybit и TAAPI.IO
+2025-07-20T19:56:01.286Z - [Process] Unexpected error processing XRP: this.taapi_io.getSMA is not a function
+2025-07-20T19:56:01.286Z - [Process] Stack trace for XRP: TypeError: this.taapi_io.getSMA is not a function
+    at MarketCollector.processCoin (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:280:31)
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:230:28)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+2025-07-20T19:56:01.286Z - [Bybit API] Fetching kline for undefined
+2025-07-20T19:56:01.288Z - [Bybit API] Fetching mark price kline for undefined
+2025-07-20T19:56:01.290Z - [Bybit API] Fetching funding history for undefined
+2025-07-20T19:56:01.291Z - [Bybit API] Fetching ticker for undefined
+2025-07-20T19:56:01.295Z - [Bybit API] Fetching order book for undefined
+2025-07-20T19:56:01.298Z - [Bybit API] Fetching recent trades for undefined
+2025-07-20T19:56:01.301Z - [TAAPI.IO] Fetching RSI for XRP on 1h
+2025-07-20T19:56:01.303Z - [TAAPI.IO] Fetching MACD for XRP on 1h
+2025-07-20T19:56:01.305Z - [TAAPI.IO] Fetching Bollinger Bands for XRP on 1h
+2025-07-20T19:56:01.476Z - [Process] Error fetching RSI for XRP: Request failed with status code 429
+2025-07-20T19:56:01.492Z - [Process] Error fetching MACD for XRP: Request failed with status code 429
+2025-07-20T19:56:01.629Z - [Process] Error fetching Bollinger Bands for XRP: Request failed with status code 429
+2025-07-20T19:56:03.406Z - [Process] --- Processing USDT (Pair: undefined) ---
+2025-07-20T19:56:03.407Z - Запрос данных для пары: undefined (символ: USDT) с Bybit и TAAPI.IO
+2025-07-20T19:56:03.408Z - [Process] Unexpected error processing USDT: this.taapi_io.getSMA is not a function
+2025-07-20T19:56:03.408Z - [Process] Stack trace for USDT: TypeError: this.taapi_io.getSMA is not a function
+    at MarketCollector.processCoin (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:280:31)
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:230:28)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+2025-07-20T19:56:03.409Z - [Bybit API] Fetching kline for undefined
+2025-07-20T19:56:03.411Z - [Bybit API] Fetching mark price kline for undefined
+2025-07-20T19:56:03.417Z - [Bybit API] Fetching funding history for undefined
+2025-07-20T19:56:03.419Z - [Bybit API] Fetching ticker for undefined
+2025-07-20T19:56:03.423Z - [Bybit API] Fetching order book for undefined
+2025-07-20T19:56:03.425Z - [Bybit API] Fetching recent trades for undefined
+2025-07-20T19:56:03.426Z - [TAAPI.IO] Fetching RSI for USDT on 1h
+2025-07-20T19:56:03.428Z - [TAAPI.IO] Fetching MACD for USDT on 1h
+2025-07-20T19:56:03.430Z - [TAAPI.IO] Fetching Bollinger Bands for USDT on 1h
+2025-07-20T19:56:03.671Z - [Process] Error fetching Bollinger Bands for USDT: Request failed with status code 429
+2025-07-20T19:56:03.677Z - [Process] Error fetching MACD for USDT: Request failed with status code 429
+2025-07-20T19:56:03.683Z - [Process] Error fetching RSI for USDT: Request failed with status code 429
+2025-07-20T19:56:05.531Z - [Process] --- Processing BNB (Pair: undefined) ---
+2025-07-20T19:56:05.532Z - Запрос данных для пары: undefined (символ: BNB) с Bybit и TAAPI.IO
+2025-07-20T19:56:05.532Z - [Process] Unexpected error processing BNB: this.taapi_io.getSMA is not a function
+2025-07-20T19:56:05.533Z - [Process] Stack trace for BNB: TypeError: this.taapi_io.getSMA is not a function
+    at MarketCollector.processCoin (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:280:31)
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:230:28)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+2025-07-20T19:56:05.533Z - [Bybit API] Fetching kline for undefined
+2025-07-20T19:56:05.536Z - [Bybit API] Fetching mark price kline for undefined
+2025-07-20T19:56:05.541Z - [Bybit API] Fetching funding history for undefined
+2025-07-20T19:56:05.543Z - [Bybit API] Fetching ticker for undefined
+2025-07-20T19:56:05.547Z - [Bybit API] Fetching order book for undefined
+2025-07-20T19:56:05.549Z - [Bybit API] Fetching recent trades for undefined
+2025-07-20T19:56:05.550Z - [TAAPI.IO] Fetching RSI for BNB on 1h
+2025-07-20T19:56:05.552Z - [TAAPI.IO] Fetching MACD for BNB on 1h
+2025-07-20T19:56:05.554Z - [TAAPI.IO] Fetching Bollinger Bands for BNB on 1h
+2025-07-20T19:56:05.718Z - [Process] Error fetching Bollinger Bands for BNB: Request failed with status code 429
+2025-07-20T19:56:05.723Z - [Process] Error fetching RSI for BNB: Request failed with status code 429
+2025-07-20T19:56:05.730Z - [Process] Error fetching MACD for BNB: Request failed with status code 429
+2025-07-20T19:56:07.658Z - [Process] --- Processing SOL (Pair: undefined) ---
+2025-07-20T19:56:07.658Z - Запрос данных для пары: undefined (символ: SOL) с Bybit и TAAPI.IO
+2025-07-20T19:56:07.659Z - [Process] Unexpected error processing SOL: this.taapi_io.getSMA is not a function
+2025-07-20T19:56:07.660Z - [Process] Stack trace for SOL: TypeError: this.taapi_io.getSMA is not a function
+    at MarketCollector.processCoin (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:280:31)
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:230:28)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+2025-07-20T19:56:07.660Z - [Bybit API] Fetching kline for undefined
+2025-07-20T19:56:07.662Z - [Bybit API] Fetching mark price kline for undefined
+2025-07-20T19:56:07.664Z - [Bybit API] Fetching funding history for undefined
+2025-07-20T19:56:07.667Z - [Bybit API] Fetching ticker for undefined
+2025-07-20T19:56:07.669Z - [Bybit API] Fetching order book for undefined
+2025-07-20T19:56:07.673Z - [Bybit API] Fetching recent trades for undefined
+2025-07-20T19:56:07.675Z - [TAAPI.IO] Fetching RSI for SOL on 1h
+2025-07-20T19:56:07.676Z - [TAAPI.IO] Fetching MACD for SOL on 1h
+2025-07-20T19:56:07.679Z - [TAAPI.IO] Fetching Bollinger Bands for SOL on 1h
+2025-07-20T19:56:07.831Z - [Process] Error fetching MACD for SOL: Request failed with status code 429
+2025-07-20T19:56:07.832Z - [Process] Error fetching RSI for SOL: Request failed with status code 429
+2025-07-20T19:56:07.845Z - [Process] Error fetching Bollinger Bands for SOL: Request failed with status code 429
+2025-07-20T19:56:09.782Z - [Process] --- Processing USDC (Pair: undefined) ---
+2025-07-20T19:56:09.782Z - Запрос данных для пары: undefined (символ: USDC) с Bybit и TAAPI.IO
+2025-07-20T19:56:09.782Z - [Process] Unexpected error processing USDC: this.taapi_io.getSMA is not a function
+2025-07-20T19:56:09.782Z - [Process] Stack trace for USDC: TypeError: this.taapi_io.getSMA is not a function
+    at MarketCollector.processCoin (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:280:31)
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:230:28)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+2025-07-20T19:56:09.783Z - [Bybit API] Fetching kline for undefined
+2025-07-20T19:56:09.785Z - [Bybit API] Fetching mark price kline for undefined
+2025-07-20T19:56:09.787Z - [Bybit API] Fetching funding history for undefined
+2025-07-20T19:56:09.790Z - [Bybit API] Fetching ticker for undefined
+2025-07-20T19:56:09.792Z - [Bybit API] Fetching order book for undefined
+2025-07-20T19:56:09.794Z - [Bybit API] Fetching recent trades for undefined
+2025-07-20T19:56:09.796Z - [TAAPI.IO] Fetching RSI for USDC on 1h
+2025-07-20T19:56:09.797Z - [TAAPI.IO] Fetching MACD for USDC on 1h
+2025-07-20T19:56:09.799Z - [TAAPI.IO] Fetching Bollinger Bands for USDC on 1h
+2025-07-20T19:56:09.941Z - [Process] Error fetching MACD for USDC: Request failed with status code 429
+2025-07-20T19:56:09.967Z - [Process] Error fetching Bollinger Bands for USDC: Request failed with status code 429
+2025-07-20T19:56:09.990Z - [Process] Error fetching RSI for USDC: Request failed with status code 429
+2025-07-20T19:56:11.902Z - [Process] --- Processing DOGE (Pair: undefined) ---
+2025-07-20T19:56:11.903Z - Запрос данных для пары: undefined (символ: DOGE) с Bybit и TAAPI.IO
+2025-07-20T19:56:11.903Z - [Process] Unexpected error processing DOGE: this.taapi_io.getSMA is not a function
+2025-07-20T19:56:11.904Z - [Process] Stack trace for DOGE: TypeError: this.taapi_io.getSMA is not a function
+    at MarketCollector.processCoin (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:280:31)
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:230:28)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+2025-07-20T19:56:11.904Z - [Bybit API] Fetching kline for undefined
+2025-07-20T19:56:11.906Z - [Bybit API] Fetching mark price kline for undefined
+2025-07-20T19:56:11.908Z - [Bybit API] Fetching funding history for undefined
+2025-07-20T19:56:11.911Z - [Bybit API] Fetching ticker for undefined
+2025-07-20T19:56:11.913Z - [Bybit API] Fetching order book for undefined
+2025-07-20T19:56:11.917Z - [Bybit API] Fetching recent trades for undefined
+2025-07-20T19:56:11.919Z - [TAAPI.IO] Fetching RSI for DOGE on 1h
+2025-07-20T19:56:11.920Z - [TAAPI.IO] Fetching MACD for DOGE on 1h
+2025-07-20T19:56:11.922Z - [TAAPI.IO] Fetching Bollinger Bands for DOGE on 1h
+2025-07-20T19:56:12.094Z - [Process] Error fetching Bollinger Bands for DOGE: Request failed with status code 429
+2025-07-20T19:56:12.213Z - [Process] Error fetching MACD for DOGE: Request failed with status code 429
+2025-07-20T19:56:12.248Z - [Process] Error fetching RSI for DOGE: Request failed with status code 429
+2025-07-20T19:58:15.743Z - Скрипт market_collector.js запущен.
+2025-07-20T19:58:15.745Z - Проверка переменной окружения MONGO_URI: mongodb://localhost:27017/smartmoney
+2025-07-20T19:58:15.802Z - Инициализация API-клиентов Bybit и TAAPI.IO...
+2025-07-20T19:58:15.804Z - Подключение к MongoDB...
+2025-07-20T19:58:15.804Z - Успешное подключение к MongoDB.
+2025-07-20T19:58:15.804Z - После попытки подключения к MongoDB.
+2025-07-20T19:58:15.805Z - Запуск основного цикла сбора данных...
+2025-07-20T19:58:15.805Z - [Collector] Starting data collection run...
+2025-07-20T19:58:15.805Z - Тестовое сообщение для проверки логирования в debug.log
+2025-07-20T19:58:15.805Z - [Collector] Checking Django API availability...
+2025-07-20T19:58:15.806Z - [Collector] Checking availability of Django API at: http://localhost:8000/api/smc/cmc-filters/active/
+2025-07-20T19:58:15.860Z - [Collector] Django API at http://localhost:8000/api/smc/cmc-filters/active/ is available.
+2025-07-20T19:58:15.861Z - [Collector] Django API is available. Will attempt to use it for filtering.
+2025-07-20T19:58:15.861Z - [API] Calling CoinMarketCap API at https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest
+2025-07-20T19:58:17.718Z - [Collector] Retrieved 5000 coins from CoinMarketCap.
+2025-07-20T19:58:17.719Z - [Collector] Django API is available. Fetching filters...
+2025-07-20T19:58:17.754Z - [Collector] Received filters from Django API. Applying them...
+2025-07-20T19:58:17.760Z - [Collector] Filtering complete. Selected 300 coins for processing.
+2025-07-20T19:58:17.760Z - [Process] --- Processing BTC (Pair: BTCUSDT) ---
+2025-07-20T19:58:17.760Z - Запрос данных для пары: BTCUSDT (символ: BTC) с Bybit и TAAPI.IO
+2025-07-20T19:58:17.761Z - [Bybit API] Fetching kline for BTCUSDT
+2025-07-20T19:58:17.764Z - [Bybit API] Fetching mark price kline for BTCUSDT
+2025-07-20T19:58:17.765Z - [Bybit API] Fetching funding history for BTCUSDT
+2025-07-20T19:58:17.767Z - [Bybit API] Fetching ticker for BTCUSDT
+2025-07-20T19:58:17.768Z - [Bybit API] Fetching order book for BTCUSDT
+2025-07-20T19:58:17.769Z - [Bybit API] Fetching recent trades for BTCUSDT
+2025-07-20T19:58:18.336Z - [TAAPI.IO] Fetching RSI for BTC on 1h
+2025-07-20T19:58:18.499Z - [Process] Error fetching RSI for BTC: Request failed with status code 403
+2025-07-20T19:58:18.500Z - [TAAPI.IO] Fetching MACD for BTC on 1h
+2025-07-20T19:58:18.634Z - [Process] Error fetching MACD for BTC: Request failed with status code 429
+2025-07-20T19:58:18.634Z - [TAAPI.IO] Fetching Bollinger Bands for BTC on 1h
+2025-07-20T19:58:18.771Z - [Process] Error fetching Bollinger Bands for BTC: Request failed with status code 429
+2025-07-20T19:58:18.772Z - [TAAPI.IO] Fetching SMA for BTC on 1h
+2025-07-20T19:58:18.901Z - [Process] Error fetching SMA for BTC: Request failed with status code 429
+2025-07-20T19:58:18.901Z - [TAAPI.IO] Fetching ATR for BTC on 1h
+2025-07-20T19:58:19.097Z - [Process] Error fetching ATR for BTC: Request failed with status code 429
+2025-07-20T19:58:19.097Z - [TAAPI.IO] Fetching Stochastic Oscillator for BTC on 1h
+2025-07-20T19:58:19.238Z - [Process] Error fetching Stochastic for BTC: Request failed with status code 429
+2025-07-20T19:58:19.238Z - [TAAPI.IO] Fetching ADX for BTC on 1h
+2025-07-20T19:58:19.358Z - [Process] Error fetching ADX for BTC: Request failed with status code 429
+2025-07-20T19:58:19.358Z - [TAAPI.IO] Fetching Parabolic SAR for BTC on 1h
+2025-07-20T19:58:19.495Z - [Process] Error fetching Parabolic SAR for BTC: Request failed with status code 429
+2025-07-20T19:58:19.495Z - [TAAPI.IO] Fetching Ichimoku Cloud for BTC on 1h
+2025-07-20T19:58:20.237Z - [Process] Error fetching Ichimoku Cloud for BTC: Request failed with status code 429
+2025-07-20T19:58:20.238Z - [TAAPI.IO] Fetching Force Index for BTC on 1h
+2025-07-20T19:58:20.828Z - [Process] Error fetching Force Index for BTC: Request failed with status code 404
+2025-07-20T19:58:20.828Z - [TAAPI.IO] Fetching KST for BTC on 1h
+2025-07-20T19:58:20.945Z - [Process] Error fetching KST for BTC: Request failed with status code 404
+2025-07-20T19:58:20.945Z - Данные для BTC успешно получены. Формируем объект для сохранения...
+2025-07-20T19:58:20.945Z - Сохранение данных для BTC в MongoDB...
+2025-07-20T19:58:21.021Z - Данные для BTC успешно сохранены в MongoDB.
+2025-07-20T19:58:23.124Z - [Process] --- Processing ETH (Pair: ETHUSDT) ---
+2025-07-20T19:58:23.124Z - Запрос данных для пары: ETHUSDT (символ: ETH) с Bybit и TAAPI.IO
+2025-07-20T19:58:23.124Z - [Bybit API] Fetching kline for ETHUSDT
+2025-07-20T19:58:23.128Z - [Bybit API] Fetching mark price kline for ETHUSDT
+2025-07-20T19:58:23.131Z - [Bybit API] Fetching funding history for ETHUSDT
+2025-07-20T19:58:23.134Z - [Bybit API] Fetching ticker for ETHUSDT
+2025-07-20T19:58:23.137Z - [Bybit API] Fetching order book for ETHUSDT
+2025-07-20T19:58:23.142Z - [Bybit API] Fetching recent trades for ETHUSDT
+2025-07-20T19:58:23.674Z - [TAAPI.IO] Fetching RSI for ETH on 1h
+2025-07-20T19:58:23.799Z - [Process] Error fetching RSI for ETH: Request failed with status code 429
+2025-07-20T19:58:23.800Z - [TAAPI.IO] Fetching MACD for ETH on 1h
+2025-07-20T19:58:23.918Z - [Process] Error fetching MACD for ETH: Request failed with status code 429
+2025-07-20T19:58:23.918Z - [TAAPI.IO] Fetching Bollinger Bands for ETH on 1h
+2025-07-20T19:58:24.073Z - [Process] Error fetching Bollinger Bands for ETH: Request failed with status code 429
+2025-07-20T19:58:24.073Z - [TAAPI.IO] Fetching SMA for ETH on 1h
+2025-07-20T19:58:24.200Z - [Process] Error fetching SMA for ETH: Request failed with status code 429
+2025-07-20T19:58:24.200Z - [TAAPI.IO] Fetching ATR for ETH on 1h
+2025-07-20T19:58:24.332Z - [Process] Error fetching ATR for ETH: Request failed with status code 429
+2025-07-20T19:58:24.332Z - [TAAPI.IO] Fetching Stochastic Oscillator for ETH on 1h
+2025-07-20T19:58:24.450Z - [Process] Error fetching Stochastic for ETH: Request failed with status code 429
+2025-07-20T19:58:24.450Z - [TAAPI.IO] Fetching ADX for ETH on 1h
+2025-07-20T19:58:24.619Z - [Process] Error fetching ADX for ETH: Request failed with status code 429
+2025-07-20T19:58:24.619Z - [TAAPI.IO] Fetching Parabolic SAR for ETH on 1h
+2025-07-20T19:58:24.748Z - [Process] Error fetching Parabolic SAR for ETH: Request failed with status code 429
+2025-07-20T19:58:24.749Z - [TAAPI.IO] Fetching Ichimoku Cloud for ETH on 1h
+2025-07-20T19:58:24.871Z - [Process] Error fetching Ichimoku Cloud for ETH: Request failed with status code 429
+2025-07-20T19:58:24.871Z - [TAAPI.IO] Fetching Force Index for ETH on 1h
+2025-07-20T19:58:25.008Z - [Process] Error fetching Force Index for ETH: Request failed with status code 404
+2025-07-20T19:58:25.008Z - [TAAPI.IO] Fetching KST for ETH on 1h
+2025-07-20T19:58:25.132Z - [Process] Error fetching KST for ETH: Request failed with status code 404
+2025-07-20T19:58:25.132Z - Данные для ETH успешно получены. Формируем объект для сохранения...
+2025-07-20T19:58:25.132Z - Сохранение данных для ETH в MongoDB...
+2025-07-20T19:58:25.182Z - Данные для ETH успешно сохранены в MongoDB.
+2025-07-20T19:58:27.283Z - [Process] --- Processing XRP (Pair: XRPUSDT) ---
+2025-07-20T19:58:27.283Z - Запрос данных для пары: XRPUSDT (символ: XRP) с Bybit и TAAPI.IO
+2025-07-20T19:58:27.284Z - [Bybit API] Fetching kline for XRPUSDT
+2025-07-20T19:58:27.287Z - [Bybit API] Fetching mark price kline for XRPUSDT
+2025-07-20T19:58:27.288Z - [Bybit API] Fetching funding history for XRPUSDT
+2025-07-20T19:58:27.291Z - [Bybit API] Fetching ticker for XRPUSDT
+2025-07-20T19:58:27.294Z - [Bybit API] Fetching order book for XRPUSDT
+2025-07-20T19:58:27.296Z - [Bybit API] Fetching recent trades for XRPUSDT
+2025-07-20T19:58:27.756Z - [TAAPI.IO] Fetching RSI for XRP on 1h
+2025-07-20T19:58:27.873Z - [Process] Error fetching RSI for XRP: Request failed with status code 429
+2025-07-20T19:58:27.873Z - [TAAPI.IO] Fetching MACD for XRP on 1h
+2025-07-20T19:58:28.006Z - [Process] Error fetching MACD for XRP: Request failed with status code 429
+2025-07-20T19:58:28.006Z - [TAAPI.IO] Fetching Bollinger Bands for XRP on 1h
+2025-07-20T19:58:28.124Z - [Process] Error fetching Bollinger Bands for XRP: Request failed with status code 429
+2025-07-20T19:58:28.124Z - [TAAPI.IO] Fetching SMA for XRP on 1h
+2025-07-20T19:58:28.251Z - [Process] Error fetching SMA for XRP: Request failed with status code 429
+2025-07-20T19:58:28.252Z - [TAAPI.IO] Fetching ATR for XRP on 1h
+2025-07-20T19:58:28.368Z - [Process] Error fetching ATR for XRP: Request failed with status code 429
+2025-07-20T19:58:28.368Z - [TAAPI.IO] Fetching Stochastic Oscillator for XRP on 1h
+2025-07-20T19:58:28.484Z - [Process] Error fetching Stochastic for XRP: Request failed with status code 429
+2025-07-20T19:58:28.484Z - [TAAPI.IO] Fetching ADX for XRP on 1h
+2025-07-20T19:58:28.608Z - [Process] Error fetching ADX for XRP: Request failed with status code 429
+2025-07-20T19:58:28.609Z - [TAAPI.IO] Fetching Parabolic SAR for XRP on 1h
+2025-07-20T19:58:28.726Z - [Process] Error fetching Parabolic SAR for XRP: Request failed with status code 429
+2025-07-20T19:58:28.727Z - [TAAPI.IO] Fetching Ichimoku Cloud for XRP on 1h
+2025-07-20T19:58:28.844Z - [Process] Error fetching Ichimoku Cloud for XRP: Request failed with status code 429
+2025-07-20T19:58:28.844Z - [TAAPI.IO] Fetching Force Index for XRP on 1h
+2025-07-20T19:58:28.966Z - [Process] Error fetching Force Index for XRP: Request failed with status code 404
+2025-07-20T19:58:28.966Z - [TAAPI.IO] Fetching KST for XRP on 1h
+2025-07-20T19:58:29.087Z - [Process] Error fetching KST for XRP: Request failed with status code 404
+2025-07-20T19:58:29.087Z - Данные для XRP успешно получены. Формируем объект для сохранения...
+2025-07-20T19:58:29.087Z - Сохранение данных для XRP в MongoDB...
+2025-07-20T19:58:29.131Z - Данные для XRP успешно сохранены в MongoDB.
+2025-07-20T19:58:31.234Z - [Process] --- Processing USDT (Pair: USDTUSDT) ---
+2025-07-20T19:58:31.234Z - Запрос данных для пары: USDTUSDT (символ: USDT) с Bybit и TAAPI.IO
+2025-07-20T19:58:31.234Z - [Bybit API] Fetching kline for USDTUSDT
+2025-07-20T19:58:31.236Z - [Bybit API] Fetching mark price kline for USDTUSDT
+2025-07-20T19:58:31.238Z - [Bybit API] Fetching funding history for USDTUSDT
+2025-07-20T19:58:31.242Z - [Bybit API] Fetching ticker for USDTUSDT
+2025-07-20T19:58:31.243Z - [Bybit API] Fetching order book for USDTUSDT
+2025-07-20T19:58:31.245Z - [Bybit API] Fetching recent trades for USDTUSDT
+2025-07-20T19:58:31.630Z - [TAAPI.IO] Fetching RSI for USDT on 1h
+2025-07-20T19:58:31.766Z - [Process] Error fetching RSI for USDT: Request failed with status code 429
+2025-07-20T19:58:31.767Z - [TAAPI.IO] Fetching MACD for USDT on 1h
+2025-07-20T19:58:31.889Z - [Process] Error fetching MACD for USDT: Request failed with status code 429
+2025-07-20T19:58:31.890Z - [TAAPI.IO] Fetching Bollinger Bands for USDT on 1h
+2025-07-20T19:58:32.021Z - [Process] Error fetching Bollinger Bands for USDT: Request failed with status code 429
+2025-07-20T19:58:32.021Z - [TAAPI.IO] Fetching SMA for USDT on 1h
+2025-07-20T19:58:32.194Z - [Process] Error fetching SMA for USDT: Request failed with status code 429
+2025-07-20T19:58:32.194Z - [TAAPI.IO] Fetching ATR for USDT on 1h
+2025-07-20T19:58:32.338Z - [Process] Error fetching ATR for USDT: Request failed with status code 429
+2025-07-20T19:58:32.338Z - [TAAPI.IO] Fetching Stochastic Oscillator for USDT on 1h
+2025-07-20T19:58:32.678Z - [Process] Error fetching Stochastic for USDT: Request failed with status code 429
+2025-07-20T19:58:32.678Z - [TAAPI.IO] Fetching ADX for USDT on 1h
+2025-07-20T19:58:34.993Z - [Process] Error fetching ADX for USDT: Request failed with status code 403
+2025-07-20T19:58:34.993Z - [TAAPI.IO] Fetching Parabolic SAR for USDT on 1h
+2025-07-20T19:58:35.161Z - [Process] Error fetching Parabolic SAR for USDT: Request failed with status code 429
+2025-07-20T19:58:35.162Z - [TAAPI.IO] Fetching Ichimoku Cloud for USDT on 1h
+2025-07-20T19:58:35.311Z - [Process] Error fetching Ichimoku Cloud for USDT: Request failed with status code 429
+2025-07-20T19:58:35.311Z - [TAAPI.IO] Fetching Force Index for USDT on 1h
+2025-07-20T19:58:35.440Z - [Process] Error fetching Force Index for USDT: Request failed with status code 404
+2025-07-20T19:58:35.440Z - [TAAPI.IO] Fetching KST for USDT on 1h
+2025-07-20T19:58:35.563Z - [Process] Error fetching KST for USDT: Request failed with status code 404
+2025-07-20T19:58:35.563Z - Данные для USDT успешно получены. Формируем объект для сохранения...
+2025-07-20T19:58:35.563Z - Сохранение данных для USDT в MongoDB...
+2025-07-20T19:58:35.568Z - Данные для USDT успешно сохранены в MongoDB.
+2025-07-20T19:58:37.669Z - [Process] --- Processing BNB (Pair: BNBUSDT) ---
+2025-07-20T19:58:37.669Z - Запрос данных для пары: BNBUSDT (символ: BNB) с Bybit и TAAPI.IO
+2025-07-20T19:58:37.670Z - [Bybit API] Fetching kline for BNBUSDT
+2025-07-20T19:58:37.673Z - [Bybit API] Fetching mark price kline for BNBUSDT
+2025-07-20T19:58:37.676Z - [Bybit API] Fetching funding history for BNBUSDT
+2025-07-20T19:58:37.679Z - [Bybit API] Fetching ticker for BNBUSDT
+2025-07-20T19:58:37.680Z - [Bybit API] Fetching order book for BNBUSDT
+2025-07-20T19:58:37.682Z - [Bybit API] Fetching recent trades for BNBUSDT
+2025-07-20T19:58:38.083Z - [TAAPI.IO] Fetching RSI for BNB on 1h
+2025-07-20T19:58:38.739Z - [Process] Error fetching RSI for BNB: Request failed with status code 429
+2025-07-20T19:58:38.740Z - [TAAPI.IO] Fetching MACD for BNB on 1h
+2025-07-20T20:08:45.190Z - Скрипт market_collector.js запущен.
+2025-07-20T20:08:45.193Z - Проверка переменной окружения MONGO_URI: mongodb://localhost:27017/smartmoney
+2025-07-20T20:08:45.249Z - Инициализация API-клиентов Bybit и TAAPI.IO...
+2025-07-20T20:08:45.251Z - Подключение к MongoDB...
+2025-07-20T20:08:45.251Z - Успешное подключение к MongoDB.
+2025-07-20T20:08:45.251Z - После попытки подключения к MongoDB.
+2025-07-20T20:08:45.252Z - Запуск основного цикла сбора данных...
+2025-07-20T20:08:45.252Z - [Collector] Starting data collection run...
+2025-07-20T20:08:45.252Z - Тестовое сообщение для проверки логирования в debug.log
+2025-07-20T20:08:45.252Z - [Collector] Checking Django API availability...
+2025-07-20T20:08:45.253Z - [Collector] Checking availability of Django API at: http://localhost:8000/api/smc/cmc-filters/active/
+2025-07-20T20:08:45.301Z - [Collector] Django API at http://localhost:8000/api/smc/cmc-filters/active/ is available.
+2025-07-20T20:08:45.302Z - [Collector] Django API is available. Will attempt to use it for filtering.
+2025-07-20T20:08:45.302Z - [API] Calling CoinMarketCap API at https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest
+2025-07-20T20:08:49.715Z - [Collector] Retrieved 5000 coins from CoinMarketCap.
+2025-07-20T20:08:49.716Z - [Collector] Django API is available. Fetching filters...
+2025-07-20T20:08:49.743Z - [Collector] Received filters from Django API. Applying them...
+2025-07-20T20:08:49.749Z - [Collector] Filtering complete. Selected 300 coins for processing.
+2025-07-20T20:08:49.749Z - [Process] --- Processing BTC (Pair: BTCUSDT) ---
+2025-07-20T20:08:49.749Z - Запрос данных для пары: BTCUSDT (символ: BTC) с Bybit и TAAPI.IO
+2025-07-20T20:08:49.750Z - [Bybit API] Fetching kline for BTCUSDT
+2025-07-20T20:08:49.752Z - [Bybit API] Fetching mark price kline for BTCUSDT
+2025-07-20T20:08:49.754Z - [Bybit API] Fetching funding history for BTCUSDT
+2025-07-20T20:08:49.756Z - [Bybit API] Fetching ticker for BTCUSDT
+2025-07-20T20:08:49.758Z - [Bybit API] Fetching order book for BTCUSDT
+2025-07-20T20:08:49.760Z - [Bybit API] Fetching recent trades for BTCUSDT
+2025-07-20T20:08:50.672Z - [TAAPI.IO] Fetching RSI for BTC on 1h
+2025-07-20T20:08:50.673Z - [TAAPI.IO] Fetching RSI for BTC on 1h
+2025-07-20T20:08:51.288Z - [TAAPI.IO] Access denied for RSI (403) - check API key or subscription
+2025-07-20T20:08:51.789Z - [TAAPI.IO] Fetching MACD for BTC on 1h
+2025-07-20T20:08:51.790Z - [TAAPI.IO] Fetching MACD for BTC on 1h
+2025-07-20T20:08:52.110Z - [TAAPI.IO] Rate limit hit for MACD. Retrying in 2000ms (attempt 1/3)
+2025-07-20T20:08:54.111Z - [TAAPI.IO] Fetching MACD for BTC on 1h
+2025-07-20T20:08:54.238Z - [TAAPI.IO] Rate limit hit for MACD. Retrying in 4000ms (attempt 2/3)
+2025-07-20T20:08:58.240Z - [TAAPI.IO] Fetching MACD for BTC on 1h
+2025-07-20T20:08:58.396Z - [Process] Error fetching MACD for BTC: Request failed with status code 429
+2025-07-20T20:08:58.396Z - [TAAPI.IO] Fetching Bollinger Bands for BTC on 1h
+2025-07-20T20:08:58.396Z - [TAAPI.IO] Fetching Bollinger Bands for BTC on 1h
+2025-07-20T20:08:58.535Z - [TAAPI.IO] Rate limit hit for Bollinger Bands. Retrying in 2000ms (attempt 1/3)
+2025-07-20T20:09:00.537Z - [TAAPI.IO] Fetching Bollinger Bands for BTC on 1h
+2025-07-20T20:09:00.676Z - [TAAPI.IO] Rate limit hit for Bollinger Bands. Retrying in 4000ms (attempt 2/3)
+2025-07-20T20:09:04.681Z - [TAAPI.IO] Fetching Bollinger Bands for BTC on 1h
+2025-07-20T20:09:04.802Z - [Process] Error fetching Bollinger Bands for BTC: Request failed with status code 429
+2025-07-20T20:09:04.803Z - [TAAPI.IO] Fetching SMA for BTC on 1h
+2025-07-20T20:09:04.803Z - [TAAPI.IO] Fetching SMA for BTC on 1h
+2025-07-20T20:09:04.931Z - [TAAPI.IO] Rate limit hit for SMA. Retrying in 2000ms (attempt 1/3)
+2025-07-20T20:09:06.933Z - [TAAPI.IO] Fetching SMA for BTC on 1h
+2025-07-20T20:09:07.483Z - [TAAPI.IO] Access denied for SMA (403) - check API key or subscription
+2025-07-20T20:09:07.983Z - [TAAPI.IO] Fetching ATR for BTC on 1h
+2025-07-20T20:09:07.984Z - [TAAPI.IO] Fetching ATR for BTC on 1h
+2025-07-20T20:09:08.162Z - [TAAPI.IO] Rate limit hit for ATR. Retrying in 2000ms (attempt 1/3)
+2025-07-20T20:09:10.163Z - [TAAPI.IO] Fetching ATR for BTC on 1h
+2025-07-20T20:09:10.283Z - [TAAPI.IO] Rate limit hit for ATR. Retrying in 4000ms (attempt 2/3)
+2025-07-20T20:09:14.286Z - [TAAPI.IO] Fetching ATR for BTC on 1h
+2025-07-20T20:09:14.401Z - [Process] Error fetching ATR for BTC: Request failed with status code 429
+2025-07-20T20:09:14.402Z - [TAAPI.IO] Fetching Stochastic Oscillator for BTC on 1h
+2025-07-20T20:09:14.402Z - [TAAPI.IO] Fetching Stochastic Oscillator for BTC on 1h
+2025-07-20T20:09:14.565Z - [TAAPI.IO] Rate limit hit for Stochastic. Retrying in 2000ms (attempt 1/3)
+2025-07-20T20:09:16.565Z - [TAAPI.IO] Fetching Stochastic Oscillator for BTC on 1h
+2025-07-20T20:09:16.727Z - [TAAPI.IO] Rate limit hit for Stochastic. Retrying in 4000ms (attempt 2/3)
+2025-07-20T20:09:20.726Z - [TAAPI.IO] Fetching Stochastic Oscillator for BTC on 1h
+2025-07-20T20:09:20.867Z - [Process] Error fetching Stochastic for BTC: Request failed with status code 429
+2025-07-20T20:09:20.868Z - [TAAPI.IO] Fetching ADX for BTC on 1h
+2025-07-20T20:09:20.868Z - [TAAPI.IO] Fetching ADX for BTC on 1h
+2025-07-20T20:09:20.982Z - [TAAPI.IO] Rate limit hit for ADX. Retrying in 2000ms (attempt 1/3)
+2025-07-20T20:09:22.985Z - [TAAPI.IO] Fetching ADX for BTC on 1h
+2025-07-20T20:09:23.146Z - [TAAPI.IO] Access denied for ADX (403) - check API key or subscription
+2025-07-20T20:09:23.647Z - [TAAPI.IO] Fetching Parabolic SAR for BTC on 1h
+2025-07-20T20:09:23.648Z - [TAAPI.IO] Fetching Parabolic SAR for BTC on 1h
+2025-07-20T20:09:23.775Z - [TAAPI.IO] Rate limit hit for Parabolic SAR. Retrying in 2000ms (attempt 1/3)
+2025-07-20T20:09:25.775Z - [TAAPI.IO] Fetching Parabolic SAR for BTC on 1h
+2025-07-20T20:09:25.902Z - [TAAPI.IO] Rate limit hit for Parabolic SAR. Retrying in 4000ms (attempt 2/3)
+2025-07-20T20:09:29.906Z - [TAAPI.IO] Fetching Parabolic SAR for BTC on 1h
+2025-07-20T20:09:30.025Z - [Process] Error fetching Parabolic SAR for BTC: Request failed with status code 429
+2025-07-20T20:09:30.025Z - [TAAPI.IO] Fetching Ichimoku Cloud for BTC on 1h
+2025-07-20T20:09:30.026Z - [TAAPI.IO] Fetching Ichimoku Cloud for BTC on 1h
+2025-07-20T20:09:30.144Z - [TAAPI.IO] Rate limit hit for Ichimoku Cloud. Retrying in 2000ms (attempt 1/3)
+2025-07-20T20:09:32.147Z - [TAAPI.IO] Fetching Ichimoku Cloud for BTC on 1h
+2025-07-20T20:09:32.293Z - [TAAPI.IO] Rate limit hit for Ichimoku Cloud. Retrying in 4000ms (attempt 2/3)
+2025-07-20T20:09:36.294Z - [TAAPI.IO] Fetching Ichimoku Cloud for BTC on 1h
+2025-07-20T20:09:36.427Z - [Process] Error fetching Ichimoku Cloud for BTC: Request failed with status code 429
+2025-07-20T20:09:36.427Z - [TAAPI.IO] Skipping Force Index and KST (not available in current plan)
+2025-07-20T20:09:36.427Z - Данные для BTC успешно получены. Формируем объект для сохранения...
+2025-07-20T20:09:36.427Z - Сохранение данных для BTC в MongoDB...
+2025-07-20T20:09:36.523Z - Данные для BTC успешно сохранены в MongoDB.
+2025-07-20T20:09:41.529Z - [Process] --- Processing ETH (Pair: ETHUSDT) ---
+2025-07-20T20:09:41.530Z - Запрос данных для пары: ETHUSDT (символ: ETH) с Bybit и TAAPI.IO
+2025-07-20T20:09:41.530Z - [Bybit API] Fetching kline for ETHUSDT
+2025-07-20T20:09:41.532Z - [Bybit API] Fetching mark price kline for ETHUSDT
+2025-07-20T20:09:41.535Z - [Bybit API] Fetching funding history for ETHUSDT
+2025-07-20T20:09:41.540Z - [Bybit API] Fetching ticker for ETHUSDT
+2025-07-20T20:09:41.542Z - [Bybit API] Fetching order book for ETHUSDT
+2025-07-20T20:09:41.547Z - [Bybit API] Fetching recent trades for ETHUSDT
+2025-07-20T20:09:42.206Z - [TAAPI.IO] Fetching RSI for ETH on 1h
+2025-07-20T20:09:42.207Z - [TAAPI.IO] Fetching RSI for ETH on 1h
+2025-07-20T20:09:42.344Z - [TAAPI.IO] Access denied for RSI (403) - check API key or subscription
+2025-07-20T20:09:42.845Z - [TAAPI.IO] Fetching MACD for ETH on 1h
+2025-07-20T20:09:42.846Z - [TAAPI.IO] Fetching MACD for ETH on 1h
+2025-07-20T20:09:42.997Z - [TAAPI.IO] Rate limit hit for MACD. Retrying in 2000ms (attempt 1/3)
+2025-07-20T20:09:45.000Z - [TAAPI.IO] Fetching MACD for ETH on 1h
+2025-07-20T20:09:45.363Z - [TAAPI.IO] Rate limit hit for MACD. Retrying in 4000ms (attempt 2/3)
+2025-07-20T20:09:49.368Z - [TAAPI.IO] Fetching MACD for ETH on 1h
+2025-07-20T20:09:49.744Z - [Process] Error fetching MACD for ETH: Request failed with status code 429
+2025-07-20T20:09:49.745Z - [TAAPI.IO] Fetching Bollinger Bands for ETH on 1h
+2025-07-20T20:09:49.745Z - [TAAPI.IO] Fetching Bollinger Bands for ETH on 1h
+2025-07-20T20:09:50.360Z - [TAAPI.IO] Rate limit hit for Bollinger Bands. Retrying in 2000ms (attempt 1/3)
+2025-07-20T20:09:52.363Z - [TAAPI.IO] Fetching Bollinger Bands for ETH on 1h
+2025-07-20T20:09:52.492Z - [TAAPI.IO] Rate limit hit for Bollinger Bands. Retrying in 4000ms (attempt 2/3)
+2025-07-20T20:09:56.492Z - [TAAPI.IO] Fetching Bollinger Bands for ETH on 1h
+2025-07-20T20:09:56.623Z - [Process] Error fetching Bollinger Bands for ETH: Request failed with status code 429
+2025-07-20T20:09:56.623Z - [TAAPI.IO] Fetching SMA for ETH on 1h
+2025-07-20T20:09:56.623Z - [TAAPI.IO] Fetching SMA for ETH on 1h
+2025-07-20T20:09:56.758Z - [TAAPI.IO] Rate limit hit for SMA. Retrying in 2000ms (attempt 1/3)
+2025-07-20T20:09:58.762Z - [TAAPI.IO] Fetching SMA for ETH on 1h
+2025-07-20T20:09:58.886Z - [TAAPI.IO] Access denied for SMA (403) - check API key or subscription
+2025-07-20T20:09:59.387Z - [TAAPI.IO] Fetching ATR for ETH on 1h
+2025-07-20T20:09:59.387Z - [TAAPI.IO] Fetching ATR for ETH on 1h
+2025-07-20T20:09:59.513Z - [TAAPI.IO] Rate limit hit for ATR. Retrying in 2000ms (attempt 1/3)
+2025-07-20T20:10:01.516Z - [TAAPI.IO] Fetching ATR for ETH on 1h
+2025-07-20T20:10:01.648Z - [TAAPI.IO] Rate limit hit for ATR. Retrying in 4000ms (attempt 2/3)
+2025-07-20T20:10:05.653Z - [TAAPI.IO] Fetching ATR for ETH on 1h
+2025-07-20T20:10:05.785Z - [Process] Error fetching ATR for ETH: Request failed with status code 429
+2025-07-20T20:10:05.785Z - [TAAPI.IO] Fetching Stochastic Oscillator for ETH on 1h
+2025-07-20T20:10:05.785Z - [TAAPI.IO] Fetching Stochastic Oscillator for ETH on 1h
+2025-07-20T20:10:05.908Z - [TAAPI.IO] Rate limit hit for Stochastic. Retrying in 2000ms (attempt 1/3)
+2025-07-20T20:10:07.910Z - [TAAPI.IO] Fetching Stochastic Oscillator for ETH on 1h
+2025-07-20T20:10:08.124Z - [TAAPI.IO] Rate limit hit for Stochastic. Retrying in 4000ms (attempt 2/3)
+2025-07-20T20:10:12.128Z - [TAAPI.IO] Fetching Stochastic Oscillator for ETH on 1h
+2025-07-20T20:10:12.241Z - [Process] Error fetching Stochastic for ETH: Request failed with status code 429
+2025-07-20T20:10:12.241Z - [TAAPI.IO] Fetching ADX for ETH on 1h
+2025-07-20T20:10:12.241Z - [TAAPI.IO] Fetching ADX for ETH on 1h
+2025-07-20T20:10:12.386Z - [TAAPI.IO] Rate limit hit for ADX. Retrying in 2000ms (attempt 1/3)
+2025-07-20T20:10:14.389Z - [TAAPI.IO] Fetching ADX for ETH on 1h
+2025-07-20T20:10:14.530Z - [TAAPI.IO] Access denied for ADX (403) - check API key or subscription
+2025-07-20T20:10:15.031Z - [TAAPI.IO] Fetching Parabolic SAR for ETH on 1h
+2025-07-20T20:10:15.031Z - [TAAPI.IO] Fetching Parabolic SAR for ETH on 1h
+2025-07-20T20:10:15.156Z - [TAAPI.IO] Rate limit hit for Parabolic SAR. Retrying in 2000ms (attempt 1/3)
+2025-07-20T20:10:17.156Z - [TAAPI.IO] Fetching Parabolic SAR for ETH on 1h
+2025-07-20T20:10:17.314Z - [TAAPI.IO] Rate limit hit for Parabolic SAR. Retrying in 4000ms (attempt 2/3)
+2025-07-20T20:17:00.698Z - Скрипт market_collector.js запущен.
+2025-07-20T20:17:00.703Z - Проверка переменной окружения MONGO_URI: mongodb://localhost:27017/smartmoney
+2025-07-20T20:17:00.767Z - Инициализация API-клиентов Bybit и TAAPI.IO...
+2025-07-20T20:17:00.769Z - Подключение к MongoDB...
+2025-07-20T20:17:00.770Z - Успешное подключение к MongoDB.
+2025-07-20T20:17:00.770Z - После попытки подключения к MongoDB.
+2025-07-20T20:17:00.770Z - Запуск основного цикла сбора данных...
+2025-07-20T20:17:00.771Z - [Collector] Starting data collection run...
+2025-07-20T20:17:00.771Z - Тестовое сообщение для проверки логирования в debug.log
+2025-07-20T20:17:00.771Z - [Collector] Checking Django API availability...
+2025-07-20T20:17:00.772Z - [Collector] Checking availability of Django API at: http://localhost:8000/api/smc/cmc-filters/active/
+2025-07-20T20:17:01.518Z - [Collector] Django API at http://localhost:8000/api/smc/cmc-filters/active/ is available.
+2025-07-20T20:17:01.518Z - [Collector] Django API is available. Will attempt to use it for filtering.
+2025-07-20T20:17:01.519Z - [API] Calling CoinMarketCap API at https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest
+2025-07-20T20:17:03.386Z - [Collector] Retrieved 5000 coins from CoinMarketCap.
+2025-07-20T20:17:03.387Z - [Collector] Django API is available. Fetching filters...
+2025-07-20T20:17:03.758Z - [Collector] Received filters from Django API. Applying them...
+2025-07-20T20:17:03.764Z - [Collector] Filtering complete. Selected 300 coins for processing.
+2025-07-20T20:17:03.765Z - [Process] --- Processing BTC (Pair: BTCUSDT) ---
+2025-07-20T20:17:03.765Z - Запрос данных для пары: BTCUSDT (символ: BTC) с Bybit и TAAPI.IO
+2025-07-20T20:17:03.766Z - [Bybit API] Fetching kline for BTCUSDT
+2025-07-20T20:17:03.768Z - [Bybit API] Fetching mark price kline for BTCUSDT
+2025-07-20T20:17:03.769Z - [Bybit API] Fetching funding history for BTCUSDT
+2025-07-20T20:17:03.771Z - [Bybit API] Fetching ticker for BTCUSDT
+2025-07-20T20:17:03.773Z - [Bybit API] Fetching order book for BTCUSDT
+2025-07-20T20:17:03.774Z - [Bybit API] Fetching recent trades for BTCUSDT
+2025-07-20T20:17:04.278Z - [TAAPI.IO] Skipped - TAAPI.IO is temporarily disabled due to API issues
+2025-07-20T20:17:04.278Z - Данные для BTC успешно получены. Формируем объект для сохранения...
+2025-07-20T20:17:04.278Z - Сохранение данных для BTC в MongoDB...
+2025-07-20T20:17:04.382Z - Данные для BTC успешно сохранены в MongoDB.
+2025-07-20T20:17:06.483Z - [Process] --- Processing ETH (Pair: ETHUSDT) ---
+2025-07-20T20:17:06.484Z - Запрос данных для пары: ETHUSDT (символ: ETH) с Bybit и TAAPI.IO
+2025-07-20T20:17:06.484Z - [Bybit API] Fetching kline for ETHUSDT
+2025-07-20T20:17:06.487Z - [Bybit API] Fetching mark price kline for ETHUSDT
+2025-07-20T20:17:06.489Z - [Bybit API] Fetching funding history for ETHUSDT
+2025-07-20T20:17:06.492Z - [Bybit API] Fetching ticker for ETHUSDT
+2025-07-20T20:17:06.496Z - [Bybit API] Fetching order book for ETHUSDT
+2025-07-20T20:17:06.498Z - [Bybit API] Fetching recent trades for ETHUSDT
+2025-07-20T20:17:07.091Z - [TAAPI.IO] Skipped - TAAPI.IO is temporarily disabled due to API issues
+2025-07-20T20:17:07.091Z - Данные для ETH успешно получены. Формируем объект для сохранения...
+2025-07-20T20:17:07.091Z - Сохранение данных для ETH в MongoDB...
+2025-07-20T20:17:07.208Z - Данные для ETH успешно сохранены в MongoDB.
+2025-07-20T20:17:09.309Z - [Process] --- Processing XRP (Pair: XRPUSDT) ---
+2025-07-20T20:17:09.309Z - Запрос данных для пары: XRPUSDT (символ: XRP) с Bybit и TAAPI.IO
+2025-07-20T20:17:09.309Z - [Bybit API] Fetching kline for XRPUSDT
+2025-07-20T20:17:09.312Z - [Bybit API] Fetching mark price kline for XRPUSDT
+2025-07-20T20:17:09.317Z - [Bybit API] Fetching funding history for XRPUSDT
+2025-07-20T20:17:09.319Z - [Bybit API] Fetching ticker for XRPUSDT
+2025-07-20T20:17:09.323Z - [Bybit API] Fetching order book for XRPUSDT
+2025-07-20T20:17:09.326Z - [Bybit API] Fetching recent trades for XRPUSDT
+2025-07-20T20:17:09.749Z - [TAAPI.IO] Skipped - TAAPI.IO is temporarily disabled due to API issues
+2025-07-20T20:17:09.749Z - Данные для XRP успешно получены. Формируем объект для сохранения...
+2025-07-20T20:17:09.750Z - Сохранение данных для XRP в MongoDB...
+2025-07-20T20:17:09.808Z - Данные для XRP успешно сохранены в MongoDB.
+2025-07-20T20:17:11.908Z - [Process] --- Processing USDT (Pair: USDTUSDT) ---
+2025-07-20T20:17:11.908Z - Запрос данных для пары: USDTUSDT (символ: USDT) с Bybit и TAAPI.IO
+2025-07-20T20:17:11.909Z - [Bybit API] Fetching kline for USDTUSDT
+2025-07-20T20:17:11.912Z - [Bybit API] Fetching mark price kline for USDTUSDT
+2025-07-20T20:17:11.915Z - [Bybit API] Fetching funding history for USDTUSDT
+2025-07-20T20:17:11.918Z - [Bybit API] Fetching ticker for USDTUSDT
+2025-07-20T20:17:11.921Z - [Bybit API] Fetching order book for USDTUSDT
+2025-07-20T20:17:11.923Z - [Bybit API] Fetching recent trades for USDTUSDT
+2025-07-20T20:17:12.280Z - [TAAPI.IO] Skipped - TAAPI.IO is temporarily disabled due to API issues
+2025-07-20T20:17:12.280Z - Данные для USDT успешно получены. Формируем объект для сохранения...
+2025-07-20T20:17:12.280Z - Сохранение данных для USDT в MongoDB...
+2025-07-20T20:17:12.291Z - Данные для USDT успешно сохранены в MongoDB.
+2025-07-20T20:17:14.394Z - [Process] --- Processing BNB (Pair: BNBUSDT) ---
+2025-07-20T20:17:14.394Z - Запрос данных для пары: BNBUSDT (символ: BNB) с Bybit и TAAPI.IO
+2025-07-20T20:17:14.395Z - [Bybit API] Fetching kline for BNBUSDT
+2025-07-20T20:17:14.398Z - [Bybit API] Fetching mark price kline for BNBUSDT
+2025-07-20T20:17:14.402Z - [Bybit API] Fetching funding history for BNBUSDT
+2025-07-20T20:17:14.404Z - [Bybit API] Fetching ticker for BNBUSDT
+2025-07-20T20:17:14.407Z - [Bybit API] Fetching order book for BNBUSDT
+2025-07-20T20:17:14.412Z - [Bybit API] Fetching recent trades for BNBUSDT
+2025-07-20T20:17:14.772Z - [TAAPI.IO] Skipped - TAAPI.IO is temporarily disabled due to API issues
+2025-07-20T20:17:14.772Z - Данные для BNB успешно получены. Формируем объект для сохранения...
+2025-07-20T20:17:14.772Z - Сохранение данных для BNB в MongoDB...
+2025-07-20T20:17:14.815Z - Данные для BNB успешно сохранены в MongoDB.
+2025-07-20T20:17:16.918Z - [Process] --- Processing SOL (Pair: SOLUSDT) ---
+2025-07-20T20:17:16.918Z - Запрос данных для пары: SOLUSDT (символ: SOL) с Bybit и TAAPI.IO
+2025-07-20T20:17:16.918Z - [Bybit API] Fetching kline for SOLUSDT
+2025-07-20T20:17:16.921Z - [Bybit API] Fetching mark price kline for SOLUSDT
+2025-07-20T20:17:16.923Z - [Bybit API] Fetching funding history for SOLUSDT
+2025-07-20T20:17:16.926Z - [Bybit API] Fetching ticker for SOLUSDT
+2025-07-20T20:17:16.928Z - [Bybit API] Fetching order book for SOLUSDT
+2025-07-20T20:17:16.932Z - [Bybit API] Fetching recent trades for SOLUSDT
+2025-07-20T20:17:17.795Z - [TAAPI.IO] Skipped - TAAPI.IO is temporarily disabled due to API issues
+2025-07-20T20:17:17.795Z - Данные для SOL успешно получены. Формируем объект для сохранения...
+2025-07-20T20:17:17.795Z - Сохранение данных для SOL в MongoDB...
+2025-07-20T20:17:17.835Z - Данные для SOL успешно сохранены в MongoDB.
+2025-07-20T20:17:19.937Z - [Process] --- Processing USDC (Pair: USDCUSDT) ---
+2025-07-20T20:17:19.938Z - Запрос данных для пары: USDCUSDT (символ: USDC) с Bybit и TAAPI.IO
+2025-07-20T20:17:19.938Z - [Bybit API] Fetching kline for USDCUSDT
+2025-07-20T20:17:19.941Z - [Bybit API] Fetching mark price kline for USDCUSDT
+2025-07-20T20:17:19.944Z - [Bybit API] Fetching funding history for USDCUSDT
+2025-07-20T20:17:19.946Z - [Bybit API] Fetching ticker for USDCUSDT
+2025-07-20T20:17:19.949Z - [Bybit API] Fetching order book for USDCUSDT
+2025-07-20T20:17:19.951Z - [Bybit API] Fetching recent trades for USDCUSDT
+2025-07-20T20:17:20.551Z - [TAAPI.IO] Skipped - TAAPI.IO is temporarily disabled due to API issues
+2025-07-20T20:17:20.552Z - Данные для USDC успешно получены. Формируем объект для сохранения...
+2025-07-20T20:17:20.552Z - Сохранение данных для USDC в MongoDB...
+2025-07-20T20:17:20.592Z - Данные для USDC успешно сохранены в MongoDB.
+2025-07-20T20:17:22.694Z - [Process] --- Processing DOGE (Pair: DOGEUSDT) ---
+2025-07-20T20:17:22.695Z - Запрос данных для пары: DOGEUSDT (символ: DOGE) с Bybit и TAAPI.IO
+2025-07-20T20:17:22.695Z - [Bybit API] Fetching kline for DOGEUSDT
+2025-07-20T20:17:22.699Z - [Bybit API] Fetching mark price kline for DOGEUSDT
+2025-07-20T20:17:22.702Z - [Bybit API] Fetching funding history for DOGEUSDT
+2025-07-20T20:17:22.703Z - [Bybit API] Fetching ticker for DOGEUSDT
+2025-07-20T20:17:22.705Z - [Bybit API] Fetching order book for DOGEUSDT
+2025-07-20T20:17:22.706Z - [Bybit API] Fetching recent trades for DOGEUSDT
+2025-07-20T20:17:23.245Z - [TAAPI.IO] Skipped - TAAPI.IO is temporarily disabled due to API issues
+2025-07-20T20:17:23.245Z - Данные для DOGE успешно получены. Формируем объект для сохранения...
+2025-07-20T20:17:23.245Z - Сохранение данных для DOGE в MongoDB...
+2025-07-20T20:17:23.283Z - Данные для DOGE успешно сохранены в MongoDB.
+2025-07-20T20:17:25.385Z - [Process] --- Processing ADA (Pair: ADAUSDT) ---
+2025-07-20T20:17:25.385Z - Запрос данных для пары: ADAUSDT (символ: ADA) с Bybit и TAAPI.IO
+2025-07-20T20:17:25.385Z - [Bybit API] Fetching kline for ADAUSDT
+2025-07-20T20:17:25.388Z - [Bybit API] Fetching mark price kline for ADAUSDT
+2025-07-20T20:17:25.389Z - [Bybit API] Fetching funding history for ADAUSDT
+2025-07-20T20:17:25.392Z - [Bybit API] Fetching ticker for ADAUSDT
+2025-07-20T20:17:25.394Z - [Bybit API] Fetching order book for ADAUSDT
+2025-07-20T20:17:25.398Z - [Bybit API] Fetching recent trades for ADAUSDT
+2025-07-20T20:17:25.931Z - [TAAPI.IO] Skipped - TAAPI.IO is temporarily disabled due to API issues
+2025-07-20T20:17:25.931Z - Данные для ADA успешно получены. Формируем объект для сохранения...
+2025-07-20T20:17:25.931Z - Сохранение данных для ADA в MongoDB...
+2025-07-20T20:17:25.964Z - Данные для ADA успешно сохранены в MongoDB.
+2025-07-20T20:17:28.066Z - [Process] --- Processing TRX (Pair: TRXUSDT) ---
+2025-07-20T20:17:28.067Z - Запрос данных для пары: TRXUSDT (символ: TRX) с Bybit и TAAPI.IO
+2025-07-20T20:17:28.067Z - [Bybit API] Fetching kline for TRXUSDT
+2025-07-20T20:17:28.069Z - [Bybit API] Fetching mark price kline for TRXUSDT
+2025-07-20T20:17:28.071Z - [Bybit API] Fetching funding history for TRXUSDT
+2025-07-20T20:17:28.075Z - [Bybit API] Fetching ticker for TRXUSDT
+2025-07-20T20:17:28.077Z - [Bybit API] Fetching order book for TRXUSDT
+2025-07-20T20:17:28.081Z - [Bybit API] Fetching recent trades for TRXUSDT
+2025-07-20T20:17:28.473Z - [TAAPI.IO] Skipped - TAAPI.IO is temporarily disabled due to API issues
+2025-07-20T20:17:28.474Z - Данные для TRX успешно получены. Формируем объект для сохранения...
+2025-07-20T20:17:28.474Z - Сохранение данных для TRX в MongoDB...
+2025-07-20T20:17:28.507Z - Данные для TRX успешно сохранены в MongoDB.
+2025-07-20T20:17:30.609Z - [Process] --- Processing HYPE (Pair: HYPEUSDT) ---
+2025-07-20T20:17:30.610Z - Запрос данных для пары: HYPEUSDT (символ: HYPE) с Bybit и TAAPI.IO
+2025-07-20T20:17:30.610Z - [Bybit API] Fetching kline for HYPEUSDT
+2025-07-20T20:17:30.613Z - [Bybit API] Fetching mark price kline for HYPEUSDT
+2025-07-20T20:17:30.615Z - [Bybit API] Fetching funding history for HYPEUSDT
+2025-07-20T20:17:30.619Z - [Bybit API] Fetching ticker for HYPEUSDT
+2025-07-20T20:17:30.621Z - [Bybit API] Fetching order book for HYPEUSDT
+2025-07-20T20:17:30.623Z - [Bybit API] Fetching recent trades for HYPEUSDT
+2025-07-20T20:17:31.005Z - [TAAPI.IO] Skipped - TAAPI.IO is temporarily disabled due to API issues
+2025-07-20T20:17:31.005Z - Данные для HYPE успешно получены. Формируем объект для сохранения...
+2025-07-20T20:17:31.005Z - Сохранение данных для HYPE в MongoDB...
+2025-07-20T20:17:31.045Z - Данные для HYPE успешно сохранены в MongoDB.
+2025-07-20T20:17:33.146Z - [Process] --- Processing XLM (Pair: XLMUSDT) ---
+2025-07-20T20:17:33.147Z - Запрос данных для пары: XLMUSDT (символ: XLM) с Bybit и TAAPI.IO
+2025-07-20T20:17:33.147Z - [Bybit API] Fetching kline for XLMUSDT
+2025-07-20T20:17:33.150Z - [Bybit API] Fetching mark price kline for XLMUSDT
+2025-07-20T20:17:33.152Z - [Bybit API] Fetching funding history for XLMUSDT
+2025-07-20T20:17:33.157Z - [Bybit API] Fetching ticker for XLMUSDT
+2025-07-20T20:17:33.159Z - [Bybit API] Fetching order book for XLMUSDT
+2025-07-20T20:17:33.166Z - [Bybit API] Fetching recent trades for XLMUSDT
+2025-07-20T20:17:33.669Z - [TAAPI.IO] Skipped - TAAPI.IO is temporarily disabled due to API issues
+2025-07-20T20:17:33.669Z - Данные для XLM успешно получены. Формируем объект для сохранения...
+2025-07-20T20:17:33.669Z - Сохранение данных для XLM в MongoDB...
+2025-07-20T20:17:33.704Z - Данные для XLM успешно сохранены в MongoDB.
+2025-07-20T20:17:35.806Z - [Process] --- Processing SUI (Pair: SUIUSDT) ---
+2025-07-20T20:17:35.806Z - Запрос данных для пары: SUIUSDT (символ: SUI) с Bybit и TAAPI.IO
+2025-07-20T20:17:35.806Z - [Bybit API] Fetching kline for SUIUSDT
+2025-07-20T20:17:35.809Z - [Bybit API] Fetching mark price kline for SUIUSDT
+2025-07-20T20:17:35.810Z - [Bybit API] Fetching funding history for SUIUSDT
+2025-07-20T20:17:35.812Z - [Bybit API] Fetching ticker for SUIUSDT
+2025-07-20T20:17:35.814Z - [Bybit API] Fetching order book for SUIUSDT
+2025-07-20T20:17:35.817Z - [Bybit API] Fetching recent trades for SUIUSDT
+2025-07-20T20:17:36.363Z - [TAAPI.IO] Skipped - TAAPI.IO is temporarily disabled due to API issues
+2025-07-20T20:17:36.363Z - Данные для SUI успешно получены. Формируем объект для сохранения...
+2025-07-20T20:17:36.363Z - Сохранение данных для SUI в MongoDB...
+2025-07-20T20:17:36.396Z - Данные для SUI успешно сохранены в MongoDB.
+2025-07-20T20:17:38.499Z - [Process] --- Processing LINK (Pair: LINKUSDT) ---
+2025-07-20T20:17:38.499Z - Запрос данных для пары: LINKUSDT (символ: LINK) с Bybit и TAAPI.IO
+2025-07-20T20:17:38.499Z - [Bybit API] Fetching kline for LINKUSDT
+2025-07-20T20:17:38.501Z - [Bybit API] Fetching mark price kline for LINKUSDT
+2025-07-20T20:17:38.504Z - [Bybit API] Fetching funding history for LINKUSDT
+2025-07-20T20:17:38.507Z - [Bybit API] Fetching ticker for LINKUSDT
+2025-07-20T20:17:38.509Z - [Bybit API] Fetching order book for LINKUSDT
+2025-07-20T20:17:38.513Z - [Bybit API] Fetching recent trades for LINKUSDT
+2025-07-20T20:17:38.893Z - [TAAPI.IO] Skipped - TAAPI.IO is temporarily disabled due to API issues
+2025-07-20T20:17:38.893Z - Данные для LINK успешно получены. Формируем объект для сохранения...
+2025-07-20T20:17:38.893Z - Сохранение данных для LINK в MongoDB...
+2025-07-20T20:17:38.923Z - Данные для LINK успешно сохранены в MongoDB.
+2025-07-20T20:17:41.025Z - [Process] --- Processing HBAR (Pair: HBARUSDT) ---
+2025-07-20T20:17:41.026Z - Запрос данных для пары: HBARUSDT (символ: HBAR) с Bybit и TAAPI.IO
+2025-07-20T20:17:41.026Z - [Bybit API] Fetching kline for HBARUSDT
+2025-07-20T20:17:41.028Z - [Bybit API] Fetching mark price kline for HBARUSDT
+2025-07-20T20:17:41.030Z - [Bybit API] Fetching funding history for HBARUSDT
+2025-07-20T20:17:41.034Z - [Bybit API] Fetching ticker for HBARUSDT
+2025-07-20T20:17:41.035Z - [Bybit API] Fetching order book for HBARUSDT
+2025-07-20T20:17:41.038Z - [Bybit API] Fetching recent trades for HBARUSDT
+2025-07-20T20:17:41.409Z - [TAAPI.IO] Skipped - TAAPI.IO is temporarily disabled due to API issues
+2025-07-20T20:17:41.410Z - Данные для HBAR успешно получены. Формируем объект для сохранения...
+2025-07-20T20:17:41.410Z - Сохранение данных для HBAR в MongoDB...
+2025-07-20T20:17:41.446Z - Данные для HBAR успешно сохранены в MongoDB.
+2025-07-20T20:17:43.550Z - [Process] --- Processing BCH (Pair: BCHUSDT) ---
+2025-07-20T20:17:43.550Z - Запрос данных для пары: BCHUSDT (символ: BCH) с Bybit и TAAPI.IO
+2025-07-20T20:17:43.550Z - [Bybit API] Fetching kline for BCHUSDT
+2025-07-20T20:17:43.553Z - [Bybit API] Fetching mark price kline for BCHUSDT
+2025-07-20T20:17:43.555Z - [Bybit API] Fetching funding history for BCHUSDT
+2025-07-20T20:17:43.558Z - [Bybit API] Fetching ticker for BCHUSDT
+2025-07-20T20:17:43.560Z - [Bybit API] Fetching order book for BCHUSDT
+2025-07-20T20:17:43.562Z - [Bybit API] Fetching recent trades for BCHUSDT
+2025-07-20T20:17:43.982Z - [TAAPI.IO] Skipped - TAAPI.IO is temporarily disabled due to API issues
+2025-07-20T20:17:43.982Z - Данные для BCH успешно получены. Формируем объект для сохранения...
+2025-07-20T20:17:43.982Z - Сохранение данных для BCH в MongoDB...
+2025-07-20T20:17:44.015Z - Данные для BCH успешно сохранены в MongoDB.
+2025-07-20T20:17:46.118Z - [Process] --- Processing AVAX (Pair: AVAXUSDT) ---
+2025-07-20T20:17:46.118Z - Запрос данных для пары: AVAXUSDT (символ: AVAX) с Bybit и TAAPI.IO
+2025-07-20T20:17:46.118Z - [Bybit API] Fetching kline for AVAXUSDT
+2025-07-20T20:17:46.122Z - [Bybit API] Fetching mark price kline for AVAXUSDT
+2025-07-20T20:17:46.124Z - [Bybit API] Fetching funding history for AVAXUSDT
+2025-07-20T20:17:46.128Z - [Bybit API] Fetching ticker for AVAXUSDT
+2025-07-20T20:17:46.131Z - [Bybit API] Fetching order book for AVAXUSDT
+2025-07-20T20:17:46.135Z - [Bybit API] Fetching recent trades for AVAXUSDT
+2025-07-20T20:17:46.499Z - [TAAPI.IO] Skipped - TAAPI.IO is temporarily disabled due to API issues
+2025-07-20T20:17:46.499Z - Данные для AVAX успешно получены. Формируем объект для сохранения...
+2025-07-20T20:17:46.499Z - Сохранение данных для AVAX в MongoDB...
+2025-07-20T20:17:46.535Z - Данные для AVAX успешно сохранены в MongoDB.
+2025-07-20T20:17:48.638Z - [Process] --- Processing SHIB (Pair: SHIBUSDT) ---
+2025-07-20T20:17:48.638Z - Запрос данных для пары: SHIBUSDT (символ: SHIB) с Bybit и TAAPI.IO
+2025-07-20T20:17:48.638Z - [Bybit API] Fetching kline for SHIBUSDT
+2025-07-20T20:17:48.641Z - [Bybit API] Fetching mark price kline for SHIBUSDT
+2025-07-20T20:17:48.643Z - [Bybit API] Fetching funding history for SHIBUSDT
+2025-07-20T20:17:48.645Z - [Bybit API] Fetching ticker for SHIBUSDT
+2025-07-20T20:17:48.649Z - [Bybit API] Fetching order book for SHIBUSDT
+2025-07-20T20:17:48.651Z - [Bybit API] Fetching recent trades for SHIBUSDT
+2025-07-20T20:17:49.070Z - [TAAPI.IO] Skipped - TAAPI.IO is temporarily disabled due to API issues
+2025-07-20T20:17:49.070Z - Данные для SHIB успешно получены. Формируем объект для сохранения...
+2025-07-20T20:17:49.070Z - Сохранение данных для SHIB в MongoDB...
+2025-07-20T20:17:49.074Z - Данные для SHIB успешно сохранены в MongoDB.
+2025-07-20T20:17:51.176Z - [Process] --- Processing LTC (Pair: LTCUSDT) ---
+2025-07-20T20:17:51.176Z - Запрос данных для пары: LTCUSDT (символ: LTC) с Bybit и TAAPI.IO
+2025-07-20T20:17:51.176Z - [Bybit] Rate limit approaching, waiting 9593ms
+2025-07-20T20:17:51.177Z - [Bybit] Rate limit approaching, waiting 9592ms
+2025-07-20T20:17:51.177Z - [Bybit] Rate limit approaching, waiting 9592ms
+2025-07-20T20:17:51.177Z - [Bybit] Rate limit approaching, waiting 9592ms
+2025-07-20T20:17:51.177Z - [Bybit API] Fetching kline for LTCUSDT
+2025-07-20T20:17:51.179Z - [Bybit API] Fetching mark price kline for LTCUSDT
+2025-07-20T20:23:43.140Z - Скрипт market_collector.js запущен.
+2025-07-20T20:23:43.144Z - Проверка переменной окружения MONGO_URI: mongodb://localhost:27017/smartmoney
+2025-07-20T20:23:43.225Z - Инициализация API-клиентов Bybit и TAAPI.IO...
+2025-07-20T20:23:43.228Z - Подключение к MongoDB...
+2025-07-20T20:23:43.228Z - Успешное подключение к MongoDB.
+2025-07-20T20:23:43.228Z - После попытки подключения к MongoDB.
+2025-07-20T20:23:43.229Z - Запуск основного цикла сбора данных...
+2025-07-20T20:23:43.229Z - [Collector] Starting data collection run...
+2025-07-20T20:23:43.229Z - Тестовое сообщение для проверки логирования в debug.log
+2025-07-20T20:23:43.230Z - [Collector] Checking Django API availability...
+2025-07-20T20:23:43.230Z - [Collector] Checking availability of Django API at: http://localhost:8000/api/smc/cmc-filters/active/
+2025-07-20T20:23:44.099Z - [Collector] Django API at http://localhost:8000/api/smc/cmc-filters/active/ is available.
+2025-07-20T20:23:44.099Z - [Collector] Django API is available. Will attempt to use it for filtering.
+2025-07-20T20:23:44.099Z - [Collector] CoinMarketCap API request limit reached for today (2025-07-20). Skipping CMC data fetch.
+2025-07-20T20:23:44.100Z - [Bybit API] Fetching instruments info for linear
+2025-07-20T20:23:44.693Z - [Collector] Found 500 unique tradable base assets on Bybit.
+2025-07-20T20:23:44.693Z - [Collector] Attempting to filter coins via Django API...
+2025-07-20T20:23:44.723Z - [Collector] Received filters from Django API. Data structure: {
+  "id": 1,
+  "name": "Default",
+  "min_volume_24h": "10000000.00",
+  "min_market_cap": "30000000.00",
+  "min_market_pairs": 1,
+  "min_age_days": 90,
+  "max_7d_change": "100.00",
+  "min_rank": 1,
+  "max_rank": 550,
+  "blacklist": "titan",
+  "excluded_tags": "casino"
+}...
+2025-07-20T20:23:44.724Z - [Collector] Error filtering coins via Django API: this._filterCoinsByDjangoConfig is not a function
+2025-07-20T20:23:44.724Z - [Collector] Falling back to Bybit volume filtering due to Django API error.
+2025-07-20T20:23:44.724Z - [Collector] Error during data collection run: this._filterCoinsByVolume is not a function
+2025-07-20T20:23:44.725Z - [Collector] Stack trace: TypeError: this._filterCoinsByVolume is not a function
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:163:52)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:5)
+2025-07-20T20:23:44.725Z - [Collector] Error setting up request: this._filterCoinsByVolume is not a function
+2025-07-20T20:28:22.204Z - Скрипт market_collector.js запущен.
+2025-07-20T20:28:22.210Z - Проверка переменной окружения MONGO_URI: mongodb://localhost:27017/smartmoney
+2025-07-20T20:28:22.283Z - Инициализация API-клиентов Bybit и TAAPI.IO...
+2025-07-20T20:28:22.285Z - [Collector] Starting data collection run...
+2025-07-20T20:28:22.285Z - [Collector] Checking Django API availability...
+2025-07-20T20:28:22.286Z - [Collector] Error during data collection run: this.checkDjangoApiAvailability is not a function
+2025-07-20T20:28:22.286Z - [Collector] Stack trace: TypeError: this.checkDjangoApiAvailability is not a function
+    at MarketCollector.run (/home/dastin-web3/my-platform/node-bot/market_data_collector/market_collector.js:113:53)
+    at main (/home/dastin-web3/my-platform/node-bot/market_data_collector/index.js:43:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-07-20T20:29:19.067Z - Скрипт market_collector.js запущен.
+2025-07-20T20:29:19.069Z - Проверка переменной окружения MONGO_URI: mongodb://localhost:27017/smartmoney
+2025-07-20T20:29:19.123Z - Инициализация API-клиентов Bybit и TAAPI.IO...
+2025-07-20T20:29:19.125Z - [Collector] Starting data collection run...
+2025-07-20T20:29:19.126Z - [Collector] Checking Django API availability...
+2025-07-20T20:29:19.126Z - [Collector] Checking availability of Django API at: http://localhost:8000/api/smc/cmc-filters/active/
+2025-07-20T20:29:20.222Z - [Collector] Django API at http://localhost:8000/api/smc/cmc-filters/active/ is available.
+2025-07-20T20:29:20.223Z - [Collector] Django API is available. Will attempt to use it for filtering.
+2025-07-20T20:29:20.223Z - [API] Calling CoinMarketCap API at https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest
+2025-07-20T20:29:21.770Z - [Collector] Retrieved 5000 coins from CoinMarketCap.
+2025-07-20T20:29:21.770Z - [Collector] Attempting to filter coins via Django API...
+2025-07-20T20:29:21.770Z - [Collector] Fetching filters from Django API at http://localhost:8000/api/smc/cmc-filters/active/
+2025-07-20T20:29:21.806Z - [Collector] Received filters from Django API. Data structure: {
+  "id": 1,
+  "name": "Default",
+  "min_volume_24h": "10000000.00",
+  "min_market_cap": "30000000.00",
+  "min_market_pairs": 1,
+  "min_age_days": 90,
+  "max_7d_change": "100.00",
+  "min_rank": 1,
+  "...
+2025-07-20T20:29:21.806Z - [Collector] Applying Django filters: min_volume_24h=10000000.00, min_market_cap=30000000.00, min_rank=1, max_rank=550
+2025-07-20T20:29:21.807Z - [Collector] Filtering complete. Selected 5000 coins for processing.
+2025-07-20T20:29:21.807Z - [Collector] Limited to 5 coins for processing due to MAX_COINS_TO_PROCESS setting.
+2025-07-20T20:29:21.808Z - [Process] --- Processing BTC (Pair: undefined) ---
+2025-07-20T20:29:21.808Z - Запрос данных для пары: undefined (символ: BTC) с Bybit и TAAPI.IO
+2025-07-20T20:29:21.808Z - [Bybit API] Fetching kline for undefined
+2025-07-20T20:29:21.811Z - [Bybit API] Fetching mark price kline for undefined
+2025-07-20T20:29:21.813Z - [Bybit API] Fetching funding history for undefined
+2025-07-20T20:29:21.814Z - [Bybit API] Fetching ticker for undefined
+2025-07-20T20:29:21.815Z - [Bybit API] Fetching order book for undefined
+2025-07-20T20:29:21.816Z - [Bybit API] Fetching recent trades for undefined
+2025-07-20T20:29:22.869Z - [TAAPI.IO] Fetching technical indicators for BTC...
+2025-07-20T20:29:22.869Z - [TAAPI.IO] Fetching RSI for BTC on 1h
+2025-07-20T20:29:22.870Z - [TAAPI.IO] Fetching RSI for BTC on 1h
+2025-07-20T20:29:23.032Z - [TAAPI.IO] Access denied for RSI (403) - check API key or subscription
+2025-07-20T20:29:23.533Z - [TAAPI.IO] Fetching MACD for BTC on 1h
+2025-07-20T20:29:23.534Z - [TAAPI.IO] Fetching MACD for BTC on 1h
+2025-07-20T20:29:23.655Z - [TAAPI.IO] Rate limit hit for MACD. Retrying in 2000ms (attempt 1/3)
+2025-07-20T20:29:25.655Z - [TAAPI.IO] Fetching MACD for BTC on 1h
+2025-07-20T20:29:25.779Z - [TAAPI.IO] Rate limit hit for MACD. Retrying in 4000ms (attempt 2/3)
+2025-07-20T20:29:29.779Z - [TAAPI.IO] Fetching MACD for BTC on 1h
+2025-07-20T20:29:29.915Z - [Process] Error fetching MACD for BTC: Request failed with status code 429
+2025-07-20T20:29:29.916Z - [TAAPI.IO] Fetching Bollinger Bands for BTC on 1h
+2025-07-20T20:29:29.916Z - [TAAPI.IO] Fetching Bollinger Bands for BTC on 1h
+2025-07-20T20:29:30.037Z - [TAAPI.IO] Rate limit hit for Bollinger Bands. Retrying in 2000ms (attempt 1/3)
+2025-07-20T20:29:32.039Z - [TAAPI.IO] Fetching Bollinger Bands for BTC on 1h
+2025-07-20T20:29:32.163Z - [TAAPI.IO] Rate limit hit for Bollinger Bands. Retrying in 4000ms (attempt 2/3)
+2025-07-20T20:29:36.168Z - [TAAPI.IO] Fetching Bollinger Bands for BTC on 1h
+2025-07-20T20:29:36.287Z - [Process] Error fetching Bollinger Bands for BTC: Request failed with status code 429
+2025-07-20T20:29:36.287Z - [TAAPI.IO] Fetching SMA for BTC on 1h
+2025-07-20T20:29:36.288Z - [TAAPI.IO] Fetching SMA for BTC on 1h
+2025-07-20T20:29:36.405Z - [TAAPI.IO] Rate limit hit for SMA. Retrying in 2000ms (attempt 1/3)
+2025-07-20T20:29:38.408Z - [TAAPI.IO] Fetching SMA for BTC on 1h
+2025-07-20T20:29:38.539Z - [TAAPI.IO] Access denied for SMA (403) - check API key or subscription
+2025-07-20T20:29:39.040Z - [TAAPI.IO] Fetching ATR for BTC on 1h
+2025-07-20T20:29:39.041Z - [TAAPI.IO] Fetching ATR for BTC on 1h
+2025-07-20T20:29:39.214Z - [TAAPI.IO] Rate limit hit for ATR. Retrying in 2000ms (attempt 1/3)
+2025-07-20T20:29:41.216Z - [TAAPI.IO] Fetching ATR for BTC on 1h
+2025-07-20T20:29:41.342Z - [TAAPI.IO] Rate limit hit for ATR. Retrying in 4000ms (attempt 2/3)
+2025-07-20T20:29:45.343Z - [TAAPI.IO] Fetching ATR for BTC on 1h
+2025-07-20T20:29:45.485Z - [Process] Error fetching ATR for BTC: Request failed with status code 429
+2025-07-20T20:29:45.485Z - [TAAPI.IO] Fetching Stochastic Oscillator for BTC on 1h
+2025-07-20T20:29:45.485Z - [TAAPI.IO] Fetching Stochastic Oscillator for BTC on 1h
+2025-07-20T20:29:45.600Z - [TAAPI.IO] Rate limit hit for Stochastic. Retrying in 2000ms (attempt 1/3)
+2025-07-20T20:29:47.602Z - [TAAPI.IO] Fetching Stochastic Oscillator for BTC on 1h
+2025-07-20T20:29:47.727Z - [TAAPI.IO] Rate limit hit for Stochastic. Retrying in 4000ms (attempt 2/3)
+2025-10-12T17:48:18.910Z - Скрипт market_collector.js запущен.
+2025-10-12T17:48:18.913Z - Проверка переменной окружения MONGO_URI: mongodb://localhost:27017/smartmoney
+2025-10-12T17:48:18.970Z - Инициализация API-клиентов Bybit и TAAPI.IO...
+2025-10-12T17:48:18.972Z - [Collector] Starting data collection run...
+2025-10-12T17:48:18.972Z - [Collector] Checking Django API availability...
+2025-10-12T17:48:18.972Z - [Collector] Checking availability of Django API at: http://localhost:8000/api/smc/cmc-filters/active/
+2025-10-12T17:48:19.011Z - [Collector] Django API at http://localhost:8000/api/smc/cmc-filters/active/ is available.
+2025-10-12T17:48:19.012Z - [Collector] Django API is available. Will attempt to use it for filtering.
+2025-10-12T17:48:19.012Z - [API] Calling CoinMarketCap API at https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest
+2025-10-12T17:48:42.006Z - [Collector] Retrieved 5000 coins from CoinMarketCap.
+2025-10-12T17:48:42.006Z - [Collector] Attempting to filter coins via Django API...
+2025-10-12T17:48:42.007Z - [Collector] Fetching filters from Django API at http://localhost:8000/api/smc/cmc-filters/active/
+2025-10-12T17:48:42.035Z - [Collector] Received filters from Django API. Data structure: {
+  "id": 1,
+  "name": "Default",
+  "min_volume_24h": "10000000.00",
+  "min_market_cap": "30000000.00",
+  "min_market_pairs": 1,
+  "min_age_days": 90,
+  "max_7d_change": "100.00",
+  "min_rank": 1,
+  "...
+2025-10-12T17:48:42.036Z - [Collector] Applying Django filters: min_volume_24h=10000000.00, min_market_cap=30000000.00, min_rank=1, max_rank=550
+2025-10-12T17:48:42.036Z - [Collector] Filtering complete. Selected 5000 coins for processing.
+2025-10-12T17:48:42.037Z - [Collector] Limited to 5 coins for processing due to MAX_COINS_TO_PROCESS setting.
+2025-10-12T17:48:42.037Z - [Process] --- Processing BTC (Pair: undefined) ---
+2025-10-12T17:48:42.037Z - Запрос данных для пары: undefined (символ: BTC) с Bybit и TAAPI.IO
+2025-10-12T17:48:42.038Z - [Bybit API] Fetching kline for undefined
+2025-10-12T17:48:42.040Z - [Bybit API] Fetching mark price kline for undefined
+2025-10-12T17:48:42.042Z - [Bybit API] Fetching funding history for undefined
+2025-10-12T17:48:42.043Z - [Bybit API] Fetching ticker for undefined
+2025-10-12T17:48:42.045Z - [Bybit API] Fetching order book for undefined
+2025-10-12T17:48:42.047Z - [Bybit API] Fetching recent trades for undefined
+2025-10-12T17:48:51.075Z - [TAAPI.IO] Fetching technical indicators for BTC...
+2025-10-12T17:48:51.075Z - [TAAPI.IO] Fetching RSI for BTC on 1h
+2025-10-12T17:48:51.076Z - [TAAPI.IO] Fetching RSI for BTC on 1h
+2025-10-12T17:48:52.492Z - [TAAPI.IO] Access denied for RSI (403) - check API key or subscription
+2025-10-12T17:48:52.993Z - [TAAPI.IO] Fetching MACD for BTC on 1h
+2025-10-12T17:48:52.993Z - [TAAPI.IO] Fetching MACD for BTC on 1h
+2025-10-12T17:48:54.267Z - [TAAPI.IO] Rate limit hit for MACD. Retrying in 2000ms (attempt 1/3)
+2025-10-12T17:48:56.270Z - [TAAPI.IO] Fetching MACD for BTC on 1h
+2025-10-12T17:48:56.760Z - [TAAPI.IO] Rate limit hit for MACD. Retrying in 4000ms (attempt 2/3)
+2025-10-12T17:49:00.763Z - [TAAPI.IO] Fetching MACD for BTC on 1h
+2025-10-12T17:49:00.990Z - [Process] Error fetching MACD for BTC: Request failed with status code 429
+2025-10-12T17:49:00.991Z - [TAAPI.IO] Fetching Bollinger Bands for BTC on 1h
+2025-10-12T17:49:00.991Z - [TAAPI.IO] Fetching Bollinger Bands for BTC on 1h
+2025-10-12T17:49:02.060Z - [TAAPI.IO] Rate limit hit for Bollinger Bands. Retrying in 2000ms (attempt 1/3)
+2025-10-12T17:49:04.062Z - [TAAPI.IO] Fetching Bollinger Bands for BTC on 1h
+2025-10-12T17:49:04.865Z - [TAAPI.IO] Rate limit hit for Bollinger Bands. Retrying in 4000ms (attempt 2/3)
+2025-10-12T17:49:08.869Z - [TAAPI.IO] Fetching Bollinger Bands for BTC on 1h
+2025-10-12T17:49:11.473Z - [TAAPI.IO] Access denied for Bollinger Bands (403) - check API key or subscription
+2025-10-12T17:49:11.974Z - [TAAPI.IO] Fetching SMA for BTC on 1h
+2025-10-12T17:49:11.974Z - [TAAPI.IO] Fetching SMA for BTC on 1h
+2025-10-12T17:49:12.959Z - [TAAPI.IO] Rate limit hit for SMA. Retrying in 2000ms (attempt 1/3)
+2025-10-12T17:49:14.961Z - [TAAPI.IO] Fetching SMA for BTC on 1h
+2025-10-12T17:49:17.895Z - [TAAPI.IO] Rate limit hit for SMA. Retrying in 4000ms (attempt 2/3)
+2025-10-12T17:49:21.897Z - [TAAPI.IO] Fetching SMA for BTC on 1h
+2025-10-12T17:49:22.624Z - [Process] Error fetching SMA for BTC: Request failed with status code 429
+2025-10-12T17:49:22.624Z - [TAAPI.IO] Fetching ATR for BTC on 1h
+2025-10-12T17:49:22.624Z - [TAAPI.IO] Fetching ATR for BTC on 1h
+2025-10-12T17:49:23.466Z - [TAAPI.IO] Rate limit hit for ATR. Retrying in 2000ms (attempt 1/3)
+2025-10-12T17:49:25.468Z - [TAAPI.IO] Fetching ATR for BTC on 1h
+2025-10-12T17:49:27.114Z - [TAAPI.IO] Access denied for ATR (403) - check API key or subscription
+2025-10-12T17:49:27.615Z - [TAAPI.IO] Fetching Stochastic Oscillator for BTC on 1h
+2025-10-12T17:49:27.615Z - [TAAPI.IO] Fetching Stochastic Oscillator for BTC on 1h
+2025-10-12T17:49:28.409Z - [TAAPI.IO] Rate limit hit for Stochastic. Retrying in 2000ms (attempt 1/3)
+2025-10-12T17:49:30.410Z - [TAAPI.IO] Fetching Stochastic Oscillator for BTC on 1h
+2025-10-12T17:49:30.644Z - [TAAPI.IO] Rate limit hit for Stochastic. Retrying in 4000ms (attempt 2/3)
+2025-10-12T17:49:34.648Z - [TAAPI.IO] Fetching Stochastic Oscillator for BTC on 1h
+2025-10-12T17:49:34.777Z - [Process] Error fetching Stochastic for BTC: Request failed with status code 429
+2025-10-12T17:49:34.777Z - [TAAPI.IO] Fetching ADX for BTC on 1h
+2025-10-12T17:49:34.778Z - [TAAPI.IO] Fetching ADX for BTC on 1h
+2025-10-12T17:49:35.160Z - [TAAPI.IO] Rate limit hit for ADX. Retrying in 2000ms (attempt 1/3)
+2025-10-12T17:49:37.162Z - [TAAPI.IO] Fetching ADX for BTC on 1h
+2025-10-12T17:49:38.590Z - [TAAPI.IO] Rate limit hit for ADX. Retrying in 4000ms (attempt 2/3)
+2025-10-12T17:49:42.593Z - [TAAPI.IO] Fetching ADX for BTC on 1h
+2025-10-12T17:49:43.503Z - [TAAPI.IO] Access denied for ADX (403) - check API key or subscription
+2025-10-12T17:49:44.003Z - [TAAPI.IO] Fetching Parabolic SAR for BTC on 1h
+2025-10-12T17:49:44.004Z - [TAAPI.IO] Fetching Parabolic SAR for BTC on 1h
+2025-10-12T17:49:45.292Z - [TAAPI.IO] Rate limit hit for Parabolic SAR. Retrying in 2000ms (attempt 1/3)
+2025-10-12T17:49:47.295Z - [TAAPI.IO] Fetching Parabolic SAR for BTC on 1h
+2025-10-12T17:49:47.469Z - [TAAPI.IO] Rate limit hit for Parabolic SAR. Retrying in 4000ms (attempt 2/3)
+2025-10-12T17:49:51.471Z - [TAAPI.IO] Fetching Parabolic SAR for BTC on 1h
+2025-10-12T17:49:51.628Z - [Process] Error fetching Parabolic SAR for BTC: Request failed with status code 429
+2025-10-12T17:49:51.628Z - [TAAPI.IO] Fetching Ichimoku Cloud for BTC on 1h
+2025-10-12T17:49:51.628Z - [TAAPI.IO] Fetching Ichimoku Cloud for BTC on 1h
+2025-10-12T17:49:51.822Z - [TAAPI.IO] Rate limit hit for Ichimoku Cloud. Retrying in 2000ms (attempt 1/3)
+2025-10-12T17:49:53.824Z - [TAAPI.IO] Fetching Ichimoku Cloud for BTC on 1h
+2025-10-12T17:49:54.181Z - [TAAPI.IO] Rate limit hit for Ichimoku Cloud. Retrying in 4000ms (attempt 2/3)
+2025-10-12T17:49:58.187Z - [TAAPI.IO] Fetching Ichimoku Cloud for BTC on 1h
+2025-10-12T17:49:58.647Z - [TAAPI.IO] Access denied for Ichimoku Cloud (403) - check API key or subscription
+2025-10-12T17:49:59.148Z - [TAAPI.IO] Skipping Force Index and KST (not available in current plan)
+2025-10-12T17:49:59.832Z - Данные для BTC успешно получены. Формируем объект для сохранения...
+2025-10-12T17:49:59.832Z - Сохранение данных для BTC в MongoDB...
+2025-10-12T17:50:00.085Z - Данные для BTC успешно сохранены в MongoDB.
+2025-10-12T17:50:02.188Z - [Process] --- Processing ETH (Pair: undefined) ---
+2025-10-12T17:50:02.189Z - Запрос данных для пары: undefined (символ: ETH) с Bybit и TAAPI.IO
+2025-10-12T17:50:02.189Z - [Bybit API] Fetching kline for undefined
+2025-10-12T17:50:02.192Z - [Bybit API] Fetching mark price kline for undefined
+2025-10-12T17:50:02.193Z - [Bybit API] Fetching funding history for undefined
+2025-10-12T17:50:02.195Z - [Bybit API] Fetching ticker for undefined
+2025-10-12T17:50:02.197Z - [Bybit API] Fetching order book for undefined
+2025-10-12T17:50:02.198Z - [Bybit API] Fetching recent trades for undefined
+2025-10-12T17:50:47.977Z - [Process] Error fetching Ticker for undefined: aborted
+2025-10-12T17:50:47.977Z - [TAAPI.IO] Fetching technical indicators for ETH...
+2025-10-12T17:50:47.977Z - [TAAPI.IO] Fetching RSI for ETH on 1h
+2025-10-12T17:50:47.977Z - [TAAPI.IO] Fetching RSI for ETH on 1h
+2025-10-12T17:50:48.504Z - [TAAPI.IO] Access denied for RSI (403) - check API key or subscription
+2025-10-12T17:50:49.005Z - [TAAPI.IO] Fetching MACD for ETH on 1h
+2025-10-12T17:50:49.005Z - [TAAPI.IO] Fetching MACD for ETH on 1h
+2025-10-12T17:50:49.853Z - [TAAPI.IO] Rate limit hit for MACD. Retrying in 2000ms (attempt 1/3)
+2025-10-12T17:50:51.855Z - [TAAPI.IO] Fetching MACD for ETH on 1h
+2025-10-12T17:50:52.174Z - [TAAPI.IO] Rate limit hit for MACD. Retrying in 4000ms (attempt 2/3)
+2025-10-12T17:50:56.178Z - [TAAPI.IO] Fetching MACD for ETH on 1h
+2025-10-12T17:50:56.754Z - [Process] Error fetching MACD for ETH: Request failed with status code 429
+2025-10-12T17:50:56.755Z - [TAAPI.IO] Fetching Bollinger Bands for ETH on 1h
+2025-10-12T17:50:56.755Z - [TAAPI.IO] Fetching Bollinger Bands for ETH on 1h
+2025-10-12T17:50:57.628Z - [TAAPI.IO] Rate limit hit for Bollinger Bands. Retrying in 2000ms (attempt 1/3)
+2025-10-12T17:50:59.628Z - [TAAPI.IO] Fetching Bollinger Bands for ETH on 1h
+2025-10-12T17:50:59.813Z - [TAAPI.IO] Rate limit hit for Bollinger Bands. Retrying in 4000ms (attempt 2/3)
+2025-10-12T17:51:03.816Z - [TAAPI.IO] Fetching Bollinger Bands for ETH on 1h
+2025-10-12T17:51:04.354Z - [TAAPI.IO] Access denied for Bollinger Bands (403) - check API key or subscription
+2025-10-12T17:51:04.855Z - [TAAPI.IO] Fetching SMA for ETH on 1h
+2025-10-12T17:51:04.855Z - [TAAPI.IO] Fetching SMA for ETH on 1h
+2025-10-12T17:51:05.745Z - [TAAPI.IO] Rate limit hit for SMA. Retrying in 2000ms (attempt 1/3)
+2025-10-12T17:51:07.747Z - [TAAPI.IO] Fetching SMA for ETH on 1h
+2025-10-12T17:51:08.275Z - [TAAPI.IO] Rate limit hit for SMA. Retrying in 4000ms (attempt 2/3)
+2025-10-12T17:51:12.277Z - [TAAPI.IO] Fetching SMA for ETH on 1h
+2025-10-12T17:51:12.592Z - [Process] Error fetching SMA for ETH: Request failed with status code 429
+2025-10-12T17:51:12.592Z - [TAAPI.IO] Fetching ATR for ETH on 1h
+2025-10-12T17:51:12.593Z - [TAAPI.IO] Fetching ATR for ETH on 1h
+2025-10-12T17:51:13.034Z - [TAAPI.IO] Rate limit hit for ATR. Retrying in 2000ms (attempt 1/3)
+2025-10-12T17:51:15.036Z - [TAAPI.IO] Fetching ATR for ETH on 1h
+2025-10-12T17:51:15.894Z - [TAAPI.IO] Rate limit hit for ATR. Retrying in 4000ms (attempt 2/3)
+2025-10-12T17:51:19.895Z - [TAAPI.IO] Fetching ATR for ETH on 1h
+2025-10-12T17:51:20.165Z - [TAAPI.IO] Access denied for ATR (403) - check API key or subscription
+2025-10-12T17:51:20.666Z - [TAAPI.IO] Fetching Stochastic Oscillator for ETH on 1h
+2025-10-12T17:51:20.666Z - [TAAPI.IO] Fetching Stochastic Oscillator for ETH on 1h
+2025-10-12T17:51:21.624Z - [TAAPI.IO] Rate limit hit for Stochastic. Retrying in 2000ms (attempt 1/3)
+2025-10-12T17:51:23.626Z - [TAAPI.IO] Fetching Stochastic Oscillator for ETH on 1h
+2025-10-12T17:51:24.738Z - [TAAPI.IO] Rate limit hit for Stochastic. Retrying in 4000ms (attempt 2/3)
+2025-10-12T17:51:28.742Z - [TAAPI.IO] Fetching Stochastic Oscillator for ETH on 1h
+2025-10-12T17:51:29.271Z - [Process] Error fetching Stochastic for ETH: Request failed with status code 429
+2025-10-12T17:51:29.271Z - [TAAPI.IO] Fetching ADX for ETH on 1h
+2025-10-12T17:51:29.271Z - [TAAPI.IO] Fetching ADX for ETH on 1h
+2025-10-12T17:51:29.959Z - [TAAPI.IO] Rate limit hit for ADX. Retrying in 2000ms (attempt 1/3)
+2025-10-12T17:51:31.962Z - [TAAPI.IO] Fetching ADX for ETH on 1h
+2025-10-12T17:51:33.808Z - [TAAPI.IO] Rate limit hit for ADX. Retrying in 4000ms (attempt 2/3)
+2025-10-12T17:51:37.812Z - [TAAPI.IO] Fetching ADX for ETH on 1h
+2025-10-12T17:51:38.603Z - [TAAPI.IO] Access denied for ADX (403) - check API key or subscription
+2025-10-12T17:51:39.104Z - [TAAPI.IO] Fetching Parabolic SAR for ETH on 1h
+2025-10-12T17:51:39.104Z - [TAAPI.IO] Fetching Parabolic SAR for ETH on 1h
+2025-10-12T17:51:39.793Z - [TAAPI.IO] Rate limit hit for Parabolic SAR. Retrying in 2000ms (attempt 1/3)
+2025-10-12T17:51:41.795Z - [TAAPI.IO] Fetching Parabolic SAR for ETH on 1h
+2025-10-12T17:51:42.464Z - [TAAPI.IO] Rate limit hit for Parabolic SAR. Retrying in 4000ms (attempt 2/3)
+2025-10-12T17:51:46.468Z - [TAAPI.IO] Fetching Parabolic SAR for ETH on 1h
+2025-10-12T17:51:47.511Z - [Process] Error fetching Parabolic SAR for ETH: Request failed with status code 429
+2025-10-12T17:51:47.512Z - [TAAPI.IO] Fetching Ichimoku Cloud for ETH on 1h
+2025-10-12T17:51:47.512Z - [TAAPI.IO] Fetching Ichimoku Cloud for ETH on 1h
+2025-10-12T17:51:47.907Z - [TAAPI.IO] Rate limit hit for Ichimoku Cloud. Retrying in 2000ms (attempt 1/3)
+2025-10-12T17:51:49.907Z - [TAAPI.IO] Fetching Ichimoku Cloud for ETH on 1h
+2025-10-12T17:51:50.161Z - [TAAPI.IO] Rate limit hit for Ichimoku Cloud. Retrying in 4000ms (attempt 2/3)
+2025-10-12T17:51:54.165Z - [TAAPI.IO] Fetching Ichimoku Cloud for ETH on 1h
+2025-10-12T17:51:54.330Z - [TAAPI.IO] Access denied for Ichimoku Cloud (403) - check API key or subscription
+2025-10-12T17:51:54.831Z - [TAAPI.IO] Skipping Force Index and KST (not available in current plan)
+2025-10-12T17:51:54.831Z - Данные для ETH успешно получены. Формируем объект для сохранения...
+2025-10-12T17:51:54.831Z - Сохранение данных для ETH в MongoDB...
+2025-10-12T17:51:54.845Z - Данные для ETH успешно сохранены в MongoDB.
+2025-10-12T17:51:56.947Z - [Process] --- Processing BNB (Pair: undefined) ---
+2025-10-12T17:51:56.947Z - Запрос данных для пары: undefined (символ: BNB) с Bybit и TAAPI.IO
+2025-10-12T17:51:56.947Z - [Bybit API] Fetching kline for undefined
+2025-10-12T17:51:56.950Z - [Bybit API] Fetching mark price kline for undefined
+2025-10-12T17:51:56.952Z - [Bybit API] Fetching funding history for undefined
+2025-10-12T17:51:56.955Z - [Bybit API] Fetching ticker for undefined
+2025-10-12T17:51:56.957Z - [Bybit API] Fetching order book for undefined
+2025-10-12T17:51:56.958Z - [Bybit API] Fetching recent trades for undefined
+2025-10-12T17:51:58.750Z - [TAAPI.IO] Fetching technical indicators for BNB...
+2025-10-12T17:51:58.750Z - [TAAPI.IO] Fetching RSI for BNB on 1h
+2025-10-12T17:51:58.750Z - [TAAPI.IO] Fetching RSI for BNB on 1h
+2025-10-12T17:51:59.432Z - [TAAPI.IO] Rate limit hit for RSI. Retrying in 2000ms (attempt 1/3)

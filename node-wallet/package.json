@@ -1,0 +1,38 @@
+{
+  "name": "node-wallet-workers",
+  "version": "1.0.0",
+  "description": "Node.js workers for wallet operations",
+  "main": "workers/payout_worker.js",
+  "scripts": {
+    "start:payout_worker": "node workers/payout_worker.js",
+    "start:api": "node services/api.js",
+    "dev": "nodemon services/api.js",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "axios": "^1.9.0",
+    "bignumber.js": "^9.3.0",
+    "body-parser": "^1.20.2",
+    "bs58": "^5.0.0",
+    "delay": "^6.0.0",
+    "ethers": "^6.11.1",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.1.5",
+    "joi": "^17.12.1",
+    "node-fetch": "^2.7.0",
+    "redis": "^4.6.13",
+    "tronweb": "^5.3.0",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.1",
+    "nodemon": "^3.0.3",
+    "prettier": "^3.2.5"
+  },
+  "author": "",
+  "license": "ISC"
+}

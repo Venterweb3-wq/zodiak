@@ -1,0 +1,96 @@
+# Планы реализации торговых модулей
+
+## Общее видение и повторное использование `node-wallet`
+
+Модуль `node-wallet`, отвечающий за генерацию кошельков, мониторинг депозитов, шифрование ключей, проведение свипов и фактические выплаты, должен быть максимально переиспользован для всех инвестиционных стратегий. Его функции взаимодействия с блокчейнами являются общими. Новым Django-приложениям (инвестиционным модулям) нужно будет отправлять ему стандартизированные сообщения в Redis (например, с указанием типа операции, ID операции, суммы, адреса, сети и т.д.). Возможно, понадобится добавить обработку новых `type` сообщений в воркерах `node-wallet`, но основная логика взаимодействия с блокчейнами останется прежней.
+
+---
+
+## 1. Модули "один в один" как `@cross_arbitrage`
+
+Для модулей, которые должны быть почти точной копией `@cross_arbitrage` (условно, `@strategy_X`):
+
+*   **Структура Django App:** Создать новое Django-приложение для каждой такой стратегии (например, `myproject/apps/strategy_x`).
+*   **Копирование и адаптация:**
+    *   **Модели:** Скопировать модели из `cross_arbitrage` (`InvestmentAccount`, `DailyPayout`, `InvestmentConfig`, `TemporaryWallet`, `WithdrawalRequest`). Переименовать их и связанные `related_name` для избежания конфликтов (например, `InvestmentAccountStrategyX`). Модель `TemporaryWallet` и её логика, возможно, могут быть вынесены в более общее место или использоваться напрямую, если её структура универсальна.
+    *   **Сериализаторы, Представления, URL-ы:** Аналогично скопировать и адаптировать, изменив ссылки на новые модели и, возможно, пути URL (например, `/api/strategy-x/...`).
+    *   **Задачи Celery:** Скопировать задачу `generate_daily_payouts`, переименовать её (например, `generate_daily_payouts_strategy_x`) и настроить для неё свое расписание в `CELERY_BEAT_SCHEDULE`. Убедиться, что она использует корректную конфигурацию (`InvestmentConfig` для `strategy_x`) и отправляет сообщения в Redis с уникальным типом.
+    *   **`InvestmentConfig`**: Для каждой новой стратегии нужно будет добавить соответствующую запись в модель `InvestmentConfig` (или создать аналогичную модель `InvestmentConfigStrategyX`, если параметры сильно отличаются).
+*   **Сообщения в Redis:** Для взаимодействия с `node-wallet` сообщения должны иметь уникальный идентификатор стратегии, например:
+    *   `type: 'daily_payout_strategy_x'`
+    *   `type: 'withdrawal_request_strategy_x'`
+
+---
+
+## 2. Упрощенный модуль (условно, `@simple_yield`)
+
+**Отличия от `@cross_arbitrage`:**
+*   Нет блокировки средств.
+*   Нет ежедневных выплат (вместо них — каждые 30 минут).
+*   Нет ручной активации счета (активация и начисление % автоматические после пополнения на минимальную сумму).
+*   Проценты начисляются каждые 30 минут (дневной % из админки / 48).
+*   Вывод в любой момент (останавливает начисление).
+*   Минимальная сумма для "активации" и начисления %.
+
+**Предложения по реализации в Django App (`myproject/apps/simple_yield`):**
+
+*   **Модели (`models.py`):**
+    *   `InvestmentAccountSimpleYield`:
+        *   `user` (OneToOneField к `settings.AUTH_USER_MODEL`)
+        *   `balance` (DecimalField)
+        *   `target_wallet`, `target_wallet_network` (CharField, для выплат)
+        *   `is_earning` (BooleanField, становится `True`, если `balance >= min_deposit`, и `False` при выводе или если баланс падает ниже минимума).
+        *   `last_payout_processed_at` (DateTimeField, для отслеживания последнего 30-минутного начисления).
+        *   *Не нужны:* `activated`, `activation_date`, `lock_days`.
+    *   `PayoutSimpleYield`:
+        *   `account` (ForeignKey к `InvestmentAccountSimpleYield`)
+        *   `payout_datetime` (DateTimeField)
+        *   `amount` (DecimalField)
+        *   `tx_hash` (CharField, nullable)
+        *   `success` (BooleanField)
+    *   `InvestmentConfigSimpleYield` (можно использовать общую `InvestmentConfig` с новым `strategy='simple_yield'`, либо создать отдельную модель):
+        *   `daily_payout_rate` (DecimalField)
+        *   `min_deposit_to_earn` (DecimalField)
+        *   `is_strategy_active` (BooleanField)
+
+*   **Задачи Celery (`tasks.py`):**
+    *   `process_simple_yield_payouts()`:
+        *   **Расписание:** Запускается каждые 30 минут (`django_celery_beat`).
+        *   **Логика:**
+            1.  Получает активную конфигурацию `InvestmentConfigSimpleYield`.
+            2.  Выбирает все `InvestmentAccountSimpleYield`, где `balance >= min_deposit_to_earn` и `is_earning == True`.
+            3.  Для каждого такого счета:
+                *   Рассчитывает сумму выплаты: `account.balance * (config.daily_payout_rate / 48)`.
+                *   Создает запись `PayoutSimpleYield` (изначально `success=False`).
+                *   Отправляет сообщение в `node-wallet` через Redis (например, `type: 'payout_simple_yield'`, `payout_id`, `amount`, `to_address`, `network`).
+                *   Обновляет `last_payout_processed_at` для счета.
+
+*   **Пополнение счета:**
+    *   Используется логика с `TemporaryWallet` (аналогично `@cross_arbitrage`).
+    *   После успешного зачисления на `InvestmentAccountSimpleYield.balance`, если `balance >= min_deposit_to_earn`, то `is_earning` = `True`.
+
+*   **Вывод средств:**
+    *   Создается `WithdrawalRequestSimpleYield`.
+    *   Отправляется сообщение в `node-wallet` (например, `type: 'withdrawal_simple_yield'`).
+    *   Если после вывода `balance < min_deposit_to_earn` или `balance == 0`, то `is_earning` = `False`.
+    *   `target_wallet` и `target_wallet_network` для `InvestmentAccountSimpleYield` должны быть заданы.
+
+*   **Эндпоинты (`views.py`, `serializers.py`, `urls.py`):**
+    *   `/status/`: Баланс, `is_earning`, `target_wallet`, `target_wallet_network`.
+    *   `/config/`: `daily_payout_rate`, `min_deposit_to_earn`.
+    *   `/deposits/history/`.
+    *   `/payouts/history/` (`PayoutSimpleYield`).
+    *   `/withdraw/create/` (`WithdrawalRequestSimpleYield`).
+    *   `/withdrawals/history/` (`WithdrawalRequestSimpleYield`).
+    *   *Не нужен:* Эндпоинт для ручной активации.
+    *   Эндпоинты для `TemporaryWallet` используются аналогично.
+    *   Эндпоинты для `node-wallet` для обновления статусов выплат и выводов.
+
+---
+
+## Общие соображения по реализации новых модулей:
+
+*   **Разделение на Django Apps:** Каждая инвестиционная стратегия должна находиться в своем Django-приложении.
+*   **Общие компоненты:** Рассмотреть вынос общих частей (например, логика `TemporaryWallet`) в общие сервисы или базовые классы.
+*   **Конфигурация:** Централизованная модель `InvestmentConfig` (с полем `strategy_name`) или отдельные модели конфигураций для каждой стратегии.
+*   **Безопасность и уникальность:** Тщательно следить за именами Celery-задач, каналов/типов сообщений в Redis, чтобы избежать пересечений. 

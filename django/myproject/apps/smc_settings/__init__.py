@@ -1,0 +1,1 @@
+# This file makes the 'smc_settings' directory a Python package. 

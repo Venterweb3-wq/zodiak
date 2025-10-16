@@ -1,0 +1,14 @@
+{
+    "name": "node-bot",
+    "version": "1.0.0",
+    "description": "Bot for fetching crypto prices for arbitrage simulation.",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js"
+    },
+    "dependencies": {
+        "axios": "^1.6.8",
+        "dotenv": "^16.4.5",
+        "winston": "^3.17.0"
+    }
+}

@@ -1,0 +1,41 @@
+# Git
+.git
+.gitignore
+
+# Docker
+Dockerfile
+.dockerignore
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+*.egg-info/
+.ipynb_checkpoints
+
+# IDE / OS specific
+.idea/
+.vscode/
+*.swp
+*~
+.DS_Store
+Thumbs.db
+
+# Logs and databases (if any stored locally outside of Docker volumes)
+*.log
+*.sqlite3
+*.db
+
+# Media files uploaded by users (if they are not meant to be in the image)
+# mediafiles/ (Если вы не хотите включать тестовые медиа в образ)
+
+# Static files collected by Django (these will be generated inside the container)
+# staticfiles_collected/ (Если вы не хотите включать ранее собранную статику в образ)
+
+# Secrets / Local Configs
+*.env
+local_settings.py 
